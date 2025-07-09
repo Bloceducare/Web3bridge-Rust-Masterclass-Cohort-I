@@ -1,0 +1,1 @@
+/home/tiya/Desktop/projects/projects2/Web3bridge-Rust-Masterclass-Cohort-I/submissions/week-1/day-2/basic-arithmetic/target/debug/basic-arithmetic: /home/tiya/Desktop/projects/projects2/Web3bridge-Rust-Masterclass-Cohort-I/submissions/week-1/day-2/basic-arithmetic/src/main.rs
