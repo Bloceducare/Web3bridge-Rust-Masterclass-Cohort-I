@@ -1,0 +1,1 @@
+/Users/idjighereoghenerukevwesandra/Desktop/Web3BridgeRustMasterClass/Web3bridge-Rust-Masterclass-Cohort-I/submissions/week-1/day-2/sandra-week1-day-2/target/debug/sandra-week1-day-2: /Users/idjighereoghenerukevwesandra/Desktop/Web3BridgeRustMasterClass/Web3bridge-Rust-Masterclass-Cohort-I/submissions/week-1/day-2/sandra-week1-day-2/src/main.rs
