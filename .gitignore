@@ -1,5 +1,6 @@
 **/target/
 # macOS
+target/
 .DS_Store
 .DS_Store?
 ._*
