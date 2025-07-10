@@ -1,3 +1,4 @@
+use std::io;
 use colored::*;
 
 fn add(a: f32, b: f32) -> f32 {
@@ -21,9 +22,21 @@ fn div(a: f32, b: f32) -> f32 {
 }
 
 fn main() {
-    let a = 10.0;
-    let b = 2.0;
-     println!();
+    println!("Enter the first number: ");
+    let mut a = String::new();
+    io::stdin()
+        .read_line(&mut a)
+        .expect("Failed to read line");
+    let a: f32 = a.trim().parse().expect("Please type a number!");
+
+    println!("Enter the second number: ");
+    let mut b = String::new();
+    io::stdin()
+        .read_line(&mut b)
+        .expect("Failed to read line");
+    let b: f32 = b.trim().parse().expect("Please type a number!");
+
+    println!();
     println!("{}", format!("Add: {}", add(a, b)).green());
     println!();
     
