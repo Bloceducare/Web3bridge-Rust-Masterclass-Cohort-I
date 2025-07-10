@@ -2,7 +2,7 @@
 
 ## Objective
 
-Study the **remaining of Chapter 2** and **all of Chapter 3** of [The Rust Programming Language](https://doc.rust-lang.org/book/) and:
+Study the **remaining of Chapter 3** and **all of Chapter 4** of [The Rust Programming Language](https://doc.rust-lang.org/book/) and:
 
 - Summarize what you understand.
 - List what you do **not** understand.
