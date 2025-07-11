@@ -1,0 +1,1 @@
+C:\Users\Cwebapps\Web3bridge-Rust-Masterclass-Cohort-I\submissions\week-1\day-4\ekoja-cheto\task2\target\debug\task2.exe: C:\Users\Cwebapps\Web3bridge-Rust-Masterclass-Cohort-I\submissions\week-1\day-4\ekoja-cheto\task2\src\main.rs
