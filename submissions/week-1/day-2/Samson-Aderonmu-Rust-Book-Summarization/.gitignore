@@ -1,4 +1,3 @@
-**/target/
 # macOS
 .DS_Store
 .DS_Store?
@@ -7,7 +6,6 @@
 .Trashes
 ehthumbs.db
 Thumbs.db
-*target/
 
 # Windows
 Thumbs.db
@@ -63,6 +61,7 @@ typings/
 
 # Optional npm cache directory
 .npm
+target/
 
 # Optional eslint cache
 .eslintcache
@@ -118,12 +117,3 @@ typings/
 # Temporary files
 *.tmp
 *.temp 
-
-
-# Rust/Cargo
-target/
-**/target/
-Cargo.lock 
-
-# target folder
-*target
