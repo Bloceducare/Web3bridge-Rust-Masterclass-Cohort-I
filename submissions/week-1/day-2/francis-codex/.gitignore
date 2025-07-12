@@ -1,0 +1,5 @@
+# Cargo build artifacts
+target/
+
+# Lock file (ignore for libraries, keep for applications)
+Cargo.lock

@@ -1,0 +1,1 @@
+![Image of my working code](https://github.com/Holamite/Web3bridge-Rust-Masterclass-Cohort-I/blob/hol/submissions/week-1/day-2/Adebara-Olamide/arithmetic/assignmentImg.png)
