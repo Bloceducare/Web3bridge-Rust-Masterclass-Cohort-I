@@ -119,5 +119,11 @@ typings/
 *.tmp
 *.temp 
 
+
+# Rust/Cargo
+target/
+**/target/
+Cargo.lock 
+
 # target folder
 *target
