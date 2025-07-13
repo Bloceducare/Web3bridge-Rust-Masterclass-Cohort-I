@@ -150,7 +150,7 @@ fn main() {
         String::from("I have made some but I need to make more."),
     );
 
-    println!("Completed todo...");
+    println!("Completed todos...");
     todo_app.mark_completed(3);
 
     todo_app.completed_todos();
