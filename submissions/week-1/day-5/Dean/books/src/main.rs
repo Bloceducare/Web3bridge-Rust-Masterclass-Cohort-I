@@ -31,15 +31,12 @@ fn main() {
 
         match book {
             BookType::Fiction(Fiction { name, author, price }) => {
-                // println!("Fiction - Author: {}, Price: ${:.2}", author, price);
                 println!("{:#?}", book);
             }
             BookType::SciFi { author, price } => {
-                // println!("Science Fiction - Price: ${:.2}", price);
                 println!("{:#?}", book);
             }
             BookType::Magazine(author, price) => {
-                // println!("Magazine - Author: {}, Price: ${:.2}", author, price);
                 println!("{:#?}", book);
             }
         }
