@@ -45,22 +45,3 @@ fn main() {
         }
     }
 }
-
-
-
-
-Book 1: Fiction(
-    Fiction {
-        name: "Jungle Man",
-        author: "Josh",
-        price: 23.54,
-    },
-)
-Book 2: SciFi {
-    author: "Dean",
-    price: 24.99,
-}
-Book 3: Magazine(
-    "National Geographic Team",
-    12.99,
-)
