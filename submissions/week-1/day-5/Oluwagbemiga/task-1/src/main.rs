@@ -30,7 +30,7 @@ struct TodoList {
 
 impl TodoList {
     fn new() -> Self {
-        TodoList { todos: Vec::new() }
+        TodoList { todos: vec![] }
     }
 
     fn add(&mut self, title: String, date: String) {
@@ -61,7 +61,7 @@ fn main() {
     }
     println!("Todos after marking completed: {:#?}", todo_list.todos);
 
-    match todo_list.todos.get_mut(1) {
+    match todo_list.todos.get(1) {
         Some(todo) => todo_list.remove(1),
         None => println!("No todo found to delete"),
     }
