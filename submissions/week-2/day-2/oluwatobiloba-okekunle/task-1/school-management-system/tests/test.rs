@@ -1,5 +1,3 @@
-extern crate school_management_system;
-
 use school_management_system::{School, StudentStatus};
 
 #[test]
