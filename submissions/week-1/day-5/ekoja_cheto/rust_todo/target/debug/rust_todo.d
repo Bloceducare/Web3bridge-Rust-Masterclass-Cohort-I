@@ -1,0 +1,1 @@
+C:\Users\Cwebapps\Web3bridge-Rust-Masterclass-Cohort-I\submissions\week-1\day-5\ekoja_cheto\rust_todo\target\debug\rust_todo.exe: C:\Users\Cwebapps\Web3bridge-Rust-Masterclass-Cohort-I\submissions\week-1\day-5\ekoja_cheto\rust_todo\src\main.rs
