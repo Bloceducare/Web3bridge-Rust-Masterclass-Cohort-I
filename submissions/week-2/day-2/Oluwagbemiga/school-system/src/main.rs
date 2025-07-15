@@ -1,66 +1,16 @@
 #[derive(Debug)]
-struct Student {
+pub struct Student {
     name: String,
     active: IsActive,
 }
 
 #[derive(Debug)]
-struct StudentList {
+pub struct StudentList {
     students: Vec<Student>,
 }
 
-impl StudentList {
-    fn new() -> Self {
-        StudentList { students: vec![] }
-    }
-
-    fn get_student(&self, index: usize) -> Option<&Student> {
-        self.students.get(index)
-    }
-
-    fn all_students(&self) -> &Vec<Student> {
-        &self.students
-    }
-
-    fn add_active_student(&mut self, name: String) {
-        let student = Student {
-            name,
-            active: IsActive::Active,
-        };
-        self.students.push(student);
-    }
-
-    fn add(&mut self, name: String) {
-        self.students.push(Student::new(name));
-    }
-
-    fn remove(&mut self, index: usize) {
-        if index < self.students.len() {
-            self.students.remove(index);
-        } else {
-            println!("No student found at index {}", index);
-        }
-    }
-    fn edit(&mut self, index: usize, new_name: String, new_active: IsActive) {
-        if index < self.students.len() {
-            self.students[index].name = new_name;
-            self.students[index].active = new_active;
-        } else {
-            println!("No student found at index {}", index);
-        }
-    }
-
-    fn delete(&mut self, index: usize) {
-        if index < self.students.len() {
-            self.students.remove(index);
-        } else {
-            println!("No student found at index {}", index);
-        }
-    }
-}
-
 #[derive(Debug)]
-enum IsActive {
+pub enum IsActive {
     Active,
     Inactive,
 }
@@ -74,12 +24,100 @@ impl Student {
     }
 }
 
-fn main() {
-    let mut student_list = StudentList::new();
-    student_list.add("Gbemiga".to_string());
-    student_list.add("Josh".to_string());
-    println!("Hello, {:?}", student_list);
+impl StudentList {
+    pub fn new() -> Self {
+        StudentList { students: vec![] }
+    }
 
-    student_list.edit(0, "Oluwagbemiga".to_string(), IsActive::Active);
-    println!("Hello, {:#?}", student_list);
+    pub fn get_student(&self, index: usize) -> Option<&Student> {
+        self.students.get(index - 1)
+    }
+
+    pub fn all_students(&self) -> &Vec<Student> {
+        &self.students
+    }
+
+    pub fn add_active_student(&mut self, id: usize) {
+        match self.students.get_mut(id - 1) {
+            Some(student) => student.active = IsActive::Active,
+
+            None => panic!("Nothing is here"),
+        }
+    }
+
+    pub fn add(&mut self, name: String) {
+        self.students.push(Student::new(name));
+    }
+
+    pub fn remove(&mut self, index: usize) {
+        if index < self.students.len() {
+            self.students.remove(index);
+        } else {
+            println!("No student found at index {}", index);
+        }
+    }
+    pub fn edit(&mut self, index: usize, new_name: String, new_active: IsActive) {
+        if index < self.students.len() {
+            self.students[index].name = new_name;
+            self.students[index].active = new_active;
+        } else {
+            println!("No student found at index {}", index);
+        }
+    }
+
+    pub fn delete(&mut self, index: usize) {
+        if index < self.students.len() {
+            self.students.remove(index);
+        } else {
+            println!("No student found at index {}", index);
+        }
+    }
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_add_students() {
+        let mut new_students = StudentList::new();
+        new_students.add("oluwagbemiga".to_string());
+        new_students.add("Xcel".to_string());
+
+        assert!(new_students.students.len() > 0);
+    }
+
+    #[test]
+    fn test_get_student() {
+        let mut new_students = StudentList::new();
+        new_students.add("oluwagbemiga".to_string());
+        new_students.add("Xcel".to_string());
+
+        let student = new_students.get_student(1).unwrap();
+        assert_eq!(student.name, "oluwagbemiga");
+    }
+
+    #[test]
+    fn test_edit_student() {
+        let mut new_students = StudentList::new();
+        new_students.add("oluwagbemiga".to_string());
+        new_students.add("Xcel".to_string());
+
+        new_students.edit(1, "bestie".to_string(), IsActive::Active);
+        assert_eq!(new_students.get_student(2).unwrap().name, "bestie");
+    }
+
+    #[test]
+    fn test_delete() {
+        let mut new_students = StudentList::new();
+        new_students.add("oluwagbemiga".to_string());
+        new_students.add("Xcel".to_string());
+        new_students.add("Bestiee".to_string());
+
+        new_students.delete(1);
+
+        for student in new_students.students {
+            assert!(student.name != "Xcel")
+        }
+    }
 }
