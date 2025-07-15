@@ -21,11 +21,13 @@ impl StudentList {
     fn all_students(&self) -> &Vec<Student> {
         &self.students
     }
-    fn get_active_students(&self) -> Vec<&Student> {
-        self.students
-            .iter()
-            .filter(|s| matches!(s.active, IsActive::Active))
-            .collect()
+
+    fn add_active_student(&mut self, name: String) {
+        let student = Student {
+            name,
+            active: IsActive::Active,
+        };
+        self.students.push(student);
     }
 
     fn add(&mut self, name: String) {
