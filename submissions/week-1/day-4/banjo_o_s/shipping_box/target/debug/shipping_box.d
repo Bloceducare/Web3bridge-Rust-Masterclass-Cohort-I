@@ -1,0 +1,1 @@
+/home/beast/master_class/Web3bridge-Rust-Masterclass-Cohort-I/submissions/week-1/day-4/banjo_o_s/shipping_box/target/debug/shipping_box: /home/beast/master_class/Web3bridge-Rust-Masterclass-Cohort-I/submissions/week-1/day-4/banjo_o_s/shipping_box/src/main.rs
