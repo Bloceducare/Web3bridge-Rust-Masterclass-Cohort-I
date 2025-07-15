@@ -1,4 +1,4 @@
-use school_management_system::{School, Student, StudentStatus}; // adjust as needed
+use school_management_system::{School}; // adjust as needed
 
 fn main() {
     let mut school = School::new();
