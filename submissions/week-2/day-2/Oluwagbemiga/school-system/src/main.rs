@@ -41,9 +41,10 @@ impl StudentList {
             println!("No student found at index {}", index);
         }
     }
-    fn edit(&mut self, index: usize, new_name: String) {
+    fn edit(&mut self, index: usize, new_name: String, new_active: IsActive) {
         if index < self.students.len() {
             self.students[index].name = new_name;
+            self.students[index].active = new_active;
         } else {
             println!("No student found at index {}", index);
         }
@@ -79,6 +80,6 @@ fn main() {
     student_list.add("Josh".to_string());
     println!("Hello, {:?}", student_list);
 
-    student_list.edit(0, "Oluwagbemiga".to_string());
+    student_list.edit(0, "Oluwagbemiga".to_string(), IsActive::Active);
     println!("Hello, {:#?}", student_list);
 }
