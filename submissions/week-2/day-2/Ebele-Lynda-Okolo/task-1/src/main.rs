@@ -1,16 +1,9 @@
-pub mod lib;
-use crate::lib::{Todo, TodoItem};
+use task_1::Student;
 
 fn main() {
-    let mut student = Todo::initialize();
+    let mut student = Student::new("Ebele Okolo".to_string(), 12, true);
 
-    let name = "Ebele Okolo".to_string();
-    let grade = 12;
-    let is_active = true;
+    student.edit("Lynda Okolo".to_string(), 12, true);
 
-    student.create_student(name, grade, is_active);
-
-    let student = student.get_student();
-
-    println!("Student are {:#?}", student);
+    student.view();
 }

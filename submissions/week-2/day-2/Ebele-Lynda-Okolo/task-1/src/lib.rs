@@ -10,9 +10,9 @@
 
 #[derive(Debug)]
 pub struct Student {
-    name: String,
-    grade: u8,
-    is_active: bool,
+    pub name: String,
+    pub grade: u8,
+    pub is_active: bool,
 }
 
 pub enum Grade {
@@ -21,10 +21,6 @@ pub enum Grade {
     C,
     D,
     F,
-}
-
-pub struct Student {
-    pub student_db: Vec<Student>
 }
 
 impl Student {
