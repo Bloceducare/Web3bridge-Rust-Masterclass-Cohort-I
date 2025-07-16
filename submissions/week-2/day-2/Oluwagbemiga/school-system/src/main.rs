@@ -1,5 +1,6 @@
 #[derive(Debug)]
 pub struct Student {
+    id: usize,
     name: String,
     active: IsActive,
 }
@@ -9,15 +10,16 @@ pub struct StudentList {
     students: Vec<Student>,
 }
 
-#[derive(Debug)]
+#[derive(Debug, PartialEq)]
 pub enum IsActive {
     Active,
     Inactive,
 }
 
 impl Student {
-    fn new(name: String) -> Self {
+    fn new(name: String, id: usize) -> Self {
         Student {
+            id,
             name,
             active: IsActive::Inactive,
         }
@@ -37,16 +39,24 @@ impl StudentList {
         &self.students
     }
 
-    pub fn add_active_student(&mut self, id: usize) {
-        match self.students.get_mut(id - 1) {
-            Some(student) => student.active = IsActive::Active,
-
-            None => panic!("Nothing is here"),
+    pub fn toggle_activity(&mut self, id: usize) {
+        for student in &mut self.students {
+            if student.id == id {
+                if student.active == IsActive::Inactive {
+                    student.active = IsActive::Active;
+                } else {
+                    student.active = IsActive::Inactive;
+                }
+            }
         }
     }
 
-    pub fn add(&mut self, name: String) {
-        self.students.push(Student::new(name));
+    // fn get_active_student(&mut self, student_id: usize) {
+
+    //     match self.students.get(student_id) {}
+    // }
+    pub fn add(&mut self, name: String, id: usize) {
+        self.students.push(Student::new(name, id));
     }
 
     pub fn remove(&mut self, index: usize) {
@@ -74,6 +84,20 @@ impl StudentList {
     }
 }
 
+fn main() {
+    let mut new_students = StudentList::new();
+    new_students.add("oluwagbemiga".to_string(), 1);
+    new_students.add("Xcel".to_string(), 2);
+    new_students.add("Bestiee".to_string(), 3);
+
+    new_students.toggle_activity(3);
+    new_students.toggle_activity(2);
+    println!(
+        "After toggling activity for student at index 3: {:#?}",
+        new_students.all_students()
+    );
+}
+
 #[cfg(test)]
 mod tests {
     use super::*;
@@ -81,8 +105,8 @@ mod tests {
     #[test]
     fn test_add_students() {
         let mut new_students = StudentList::new();
-        new_students.add("oluwagbemiga".to_string());
-        new_students.add("Xcel".to_string());
+        new_students.add("oluwagbemiga".to_string(), 1);
+        new_students.add("Xcel".to_string(), 2);
 
         assert!(new_students.students.len() > 0);
     }
@@ -90,8 +114,8 @@ mod tests {
     #[test]
     fn test_get_student() {
         let mut new_students = StudentList::new();
-        new_students.add("oluwagbemiga".to_string());
-        new_students.add("Xcel".to_string());
+        new_students.add("oluwagbemiga".to_string(), 1);
+        new_students.add("Xcel".to_string(), 2);
 
         let student = new_students.get_student(1).unwrap();
         assert_eq!(student.name, "oluwagbemiga");
@@ -100,8 +124,8 @@ mod tests {
     #[test]
     fn test_edit_student() {
         let mut new_students = StudentList::new();
-        new_students.add("oluwagbemiga".to_string());
-        new_students.add("Xcel".to_string());
+        new_students.add("oluwagbemiga".to_string(), 1);
+        new_students.add("Xcel".to_string(), 2);
 
         new_students.edit(1, "bestie".to_string(), IsActive::Active);
         assert_eq!(new_students.get_student(2).unwrap().name, "bestie");
@@ -110,14 +134,31 @@ mod tests {
     #[test]
     fn test_delete() {
         let mut new_students = StudentList::new();
-        new_students.add("oluwagbemiga".to_string());
-        new_students.add("Xcel".to_string());
-        new_students.add("Bestiee".to_string());
+        new_students.add("oluwagbemiga".to_string(), 1);
+        new_students.add("Xcel".to_string(), 2);
+        new_students.add("Bestiee".to_string(), 3);
 
         new_students.delete(1);
 
         for student in new_students.students {
             assert!(student.name != "Xcel")
+        }
+    }
+    #[test]
+    fn test_toggle_activity() {
+        let mut new_students = StudentList::new();
+        new_students.add("oluwagbemiga".to_string(), 1);
+        new_students.add("Xcel".to_string(), 2);
+        new_students.add("Bestiee".to_string(), 3);
+
+        new_students.toggle_activity(3);
+
+        for student in new_students.students {
+            if student.id == 3 {
+                assert_eq!(student.active, IsActive::Active);
+            } else {
+                assert_eq!(student.active, IsActive::Inactive);
+            }
         }
     }
 }
