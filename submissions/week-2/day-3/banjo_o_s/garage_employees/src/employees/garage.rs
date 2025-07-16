@@ -29,6 +29,15 @@ pub struct Employee {
     pub role: EmployeeRole,
 }
 
+impl EmployeeStatus {
+    pub fn is_terminated(&self) -> bool {
+        match self {
+            EmployeeStatus::Terminated => true,
+            EmployeeStatus::Engaged => false,
+        }
+    }
+}
+
 pub struct Garage {
     pub name: String,
     pub employees: HashMap<u128, Employee>,
@@ -66,8 +75,20 @@ impl Garage {
         self.id += 1;
         true
     }
-    pub fn get_employee(&self, id: u128) -> &Employee {
-        let found_employee = self.employees.get(&id);
-        found_employee.unwrap()
+    pub fn get_employee(&self, id: u128) -> Option<&Employee> {
+        let employee = self.employees.get(&id)?;
+        Some(employee)
+    }
+    
+    pub fn terminate_employee(&mut self, id: u128, ) -> Result<bool, String> {
+        let optional_employee = self.employees.get_mut(&id);
+        let result: bool = Some(optional_employee).unwrap().expect("e didn't dey").terminate_employee();
+        Ok(result)
+    }
+
+    pub fn change_employee_role(&mut self, id: u128, new_role: EmployeeRole) -> Result<bool, String> {
+        let optional_employee = self.employees.get_mut(&id);
+        let result: bool = Some(optional_employee).unwrap().expect("e didn't dey").change_employee_role(new_role);
+        Ok(result)
     }
 }
