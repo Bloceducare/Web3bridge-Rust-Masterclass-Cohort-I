@@ -4,6 +4,21 @@ pub struct Student {
     pub student_status: StudentStatus,
 }
 
+#[derive(Debug, PartialEq, Copy, Clone)]
+pub enum StudentStatus {
+    NotActive,
+    Active,
+}
+
+impl StudentStatus {
+    pub fn check_variants(self) -> Self {
+        match self {
+            Self::Active => Self::Active,
+            Self::NotActive => Self::Active,
+        }
+    }
+}
+
 impl Student {
     pub fn new(name: String, grade: u8) -> Self {
         Self {

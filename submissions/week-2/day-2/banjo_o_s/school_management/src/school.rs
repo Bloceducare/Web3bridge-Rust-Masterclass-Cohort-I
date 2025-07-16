@@ -1,3 +1,6 @@
+use crate::student::{Student, StudentStatus};
+use std::collections::HashMap;
+
 pub struct School {
     students: HashMap<u128, Student>,
     student_key: u128,
