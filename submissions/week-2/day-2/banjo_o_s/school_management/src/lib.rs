@@ -34,7 +34,7 @@ impl Student {
     }
 
     pub fn update_student_status(&mut self, status: StudentStatus) -> bool {
-        self.student_status = status;
+        self.student_status = status.check_variants();
         true
     }
 
