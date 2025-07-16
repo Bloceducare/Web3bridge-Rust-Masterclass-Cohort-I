@@ -1,10 +1,8 @@
 use std::collections::HashMap;
 
-
-
-mod test;
 mod school;
 mod student;
+mod test;
 
 pub struct Student {
     pub name: String,
@@ -12,26 +10,28 @@ pub struct Student {
     pub student_status: StudentStatus,
 }
 
-
 #[derive(Debug, PartialEq, Copy, Clone)]
 pub enum StudentStatus {
-    NotActive, 
-    Active
+    NotActive,
+    Active,
 }
 
 impl StudentStatus {
     pub fn check_variants(self) -> Self {
         match self {
             Self::Active => Self::Active,
-            Self::NotActive => Self::Active
+            Self::NotActive => Self::Active,
         }
     }
 }
 
-
 impl Student {
     pub fn new(name: String, grade: u8) -> Self {
-        Self { name: name, grade: grade, student_status: StudentStatus::Active }
+        Self {
+            name: name,
+            grade: grade,
+            student_status: StudentStatus::Active,
+        }
     }
 
     pub fn update_student_status(&mut self, status: StudentStatus) -> bool {
@@ -45,17 +45,17 @@ impl Student {
     }
 }
 
-
-
 pub struct School {
     students: HashMap<u128, Student>,
     student_key: u128,
 }
 
-
 impl School {
     pub fn new() -> Self {
-        Self { students: HashMap::new(), student_key: 0 }
+        Self {
+            students: HashMap::new(),
+            student_key: 0,
+        }
     }
 
     pub fn add_student(&mut self, name: String, grade: u8) -> bool {
@@ -70,7 +70,7 @@ impl School {
         self.students.get(&key)
     }
 
-    pub fn remove_student(&mut self, key: u128) -> Option<Student>{
+    pub fn remove_student(&mut self, key: u128) -> Option<Student> {
         self.students.remove(&key)
     }
 
@@ -84,4 +84,3 @@ impl School {
         std.update_student_status(status)
     }
 }
-

@@ -1,5 +1,3 @@
-
-
 pub struct Student {
     pub name: String,
     pub grade: u8,
@@ -8,7 +6,11 @@ pub struct Student {
 
 impl Student {
     pub fn new(name: String, grade: u8) -> Self {
-        Self { name: name, grade: grade, student_status: StudentStatus::Active }
+        Self {
+            name: name,
+            grade: grade,
+            student_status: StudentStatus::Active,
+        }
     }
 
     pub fn update_student_status(&mut self, status: StudentStatus) -> bool {

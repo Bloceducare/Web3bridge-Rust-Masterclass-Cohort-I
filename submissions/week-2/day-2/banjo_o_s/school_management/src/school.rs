@@ -1,18 +1,14 @@
-
-
-
-
 pub struct School {
     students: HashMap<u128, Student>,
     student_key: u128,
 }
 
-
-
-
 impl School {
     pub fn new() -> Self {
-        Self { students: HashMap::new(), student_key: 0 }
+        Self {
+            students: HashMap::new(),
+            student_key: 0,
+        }
     }
 
     pub fn add_student(&mut self, name: String, grade: u8) -> bool {
@@ -27,7 +23,7 @@ impl School {
         self.students.get(&key)
     }
 
-    pub fn remove_student(&mut self, key: u128) -> Option<Student>{
+    pub fn remove_student(&mut self, key: u128) -> Option<Student> {
         self.students.remove(&key)
     }
 
