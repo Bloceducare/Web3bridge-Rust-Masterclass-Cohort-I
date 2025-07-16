@@ -3,7 +3,8 @@ use std::collections::HashMap;
 
 
 mod test;
-
+mod school;
+mod student;
 
 pub struct Student {
     pub name: String,
