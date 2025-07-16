@@ -1,5 +1,5 @@
 #[derive(Debug)]
-enum Active{
+enum Active {
     Active,
     Inactive,
 }
@@ -13,37 +13,44 @@ struct Student {
 }
 
 #[derive(Debug)]
-pub struct Class{
+pub struct Class {
     pub students: Vec<Student>,
 }
 
-impl Student{
-    fn new(id: u32, name: String, grade: i32) -> Self {
-        Self { id, name, grade, active: Active::Inactive }
+impl Class {
+    fn new() -> Self {
+        Self {
+            students: Vec::new(),
+        }
+    }
+
+    fn register_student(&mut self, name: String, grade: i32) {
+        let student_id: u32 = (self.students.len()) as u32 + 1;
+
+        let student = Student {
+            id: student_id,
+            name,
+            grade,
+            active: Active::Inactive,
+        };
+
+        self.students.push(student);
     }
 
     fn update_student(&mut self, id: u32, name: String, grade: i32) {
-        self.id = id;
-        self.name = name;
-        self.grade = grade;
+        let student_id: usize = (id - 1).try_into().unwrap(); //inefficient impl
+        self.students[student_id].name = name;
+        self.students[student_id].grade = grade;
     }
 
-    fn mark_student_active(&mut self) {
-        self.active = Active::Active;
+    fn mark_student_active(&mut self, id: u32) {
+        let student_id: usize = (id - 1).try_into().unwrap();
+        self.students[student_id].active = Active::Active;
     }
 
-    fn mark_student_inactive(&mut self) {
-        self.active = Active::Inactive;
-    }
-}
-
-impl Class{
-    fn new() -> Self {
-        Self { students: Vec::new() }
-    }
-
-    fn register_student(&mut self, student: Student) {
-        self.students.push(student);
+    fn mark_student_inactive(&mut self, id: u32) {
+        let student_id: usize = (id - 1).try_into().unwrap();
+        self.students[student_id].active = Active::Inactive;
     }
 
     fn delete_student(&mut self, id: u32) {
@@ -60,28 +67,18 @@ impl Class{
     }
 }
 
-
 fn main() {
     let mut class = Class::new();
-    let mut student = Student::new(1, "badman dev".to_string(), 3);
-    class.register_student(student);
+    class.register_student("badman dev".to_string(), 3);
+
     class.view_students();
     class.delete_student(1);
     println!("Class: {:?}", class);
-
 }
 
 #[cfg(test)]
 mod tests {
     use super::*;
-
-    #[test]
-    fn test_create_student() {
-        let student = Student::new(1, "John Doe".to_string(), 85);
-        assert_eq!(student.id, 1);
-        assert_eq!(student.name, "John Doe");
-        assert_eq!(student.grade, 85);
-    }
 
     #[test]
     fn test_create_class() {
@@ -90,24 +87,22 @@ mod tests {
     }
 
     #[test]
-    fn test_register_student(){
+    fn test_register_student() {
         let mut class = Class::new();
-        assert!(class.students.len() == 0);
-
-        let student = Student::new(1, "Alice Smith".to_string(), 92);
-        class.register_student(student);
+        class.register_student("Alice Smith".to_string(), 92);
+        let student = &class.students[0];
+        assert_eq!(student.id, 1);
+        assert_eq!(student.name, "Alice Smith");
+        assert_eq!(student.grade, 92);
         assert!(class.students.len() == 1);
     }
 
     #[test]
-    fn test_delete_student(){
+    fn test_delete_student() {
         let mut class = Class::new();
-        
-        let student1 = Student::new(1, "Bob Johnson".to_string(), 78);
-        let student2 = Student::new(2, "Carol Brown".to_string(), 88);
-        
-        class.register_student(student1);
-        class.register_student(student2);
+
+        class.register_student("Bob Johnson".to_string(), 78);
+        class.register_student("Carol Brown".to_string(), 88);
         assert_eq!(class.students.len(), 2);
 
         class.delete_student(1);
@@ -116,38 +111,38 @@ mod tests {
     }
 
     #[test]
-    fn test_update_student(){
-        let mut student = Student::new(1, "David Wilson".to_string(), 75);
-        
-        student.update_student(1, "David W. Wilson".to_string(), 80);
-        
-        assert_eq!(student.name, "David W. Wilson");
-        assert_eq!(student.grade, 80);
+    fn test_update_student() {
+        let mut class = Class::new();
+        class.register_student("David W. Wilson".to_string(), 75);
+        class.update_student(1, "David W. Wilson".to_string(), 80);
+
+        assert_eq!(class.students[0].name, "David W. Wilson");
+        assert_eq!(class.students[0].grade, 80);
     }
 
     #[test]
-    fn test_mark_student_active(){
-        let mut student = Student::new(1, "Emma Davis".to_string(), 90);
-        
-        student.mark_student_active();
-        
-        match student.active {
+    fn test_mark_student_active() {
+        let mut class = Class::new();
+        class.register_student("David W. Wilson".to_string(), 75);
+
+        class.mark_student_active(1);
+
+        match class.students[0].active {
             Active::Active => assert!(true),
             Active::Inactive => assert!(false, "Student should be active"),
         }
     }
 
     #[test]
-    fn test_mark_student_inactive(){
-        let mut student = Student::new(1, "Frank Miller".to_string(), 82);
-        
-        student.mark_student_active();
-        student.mark_student_inactive();
-        
-        match student.active {
+    fn test_mark_student_inactive() {
+        let mut class = Class::new();
+        class.register_student("David W. Wilson".to_string(), 75);
+
+        class.mark_student_inactive(1);
+
+        match class.students[0].active {
             Active::Inactive => assert!(true),
             Active::Active => assert!(false, "Student should be inactive"),
         }
     }
-
 }
