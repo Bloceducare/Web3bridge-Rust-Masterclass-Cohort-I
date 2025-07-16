@@ -1,4 +1,4 @@
-use crate::student::{Student, StudentStatus};
+use crate::management::student::{Student, StudentStatus};
 use std::collections::HashMap;
 
 pub struct School {

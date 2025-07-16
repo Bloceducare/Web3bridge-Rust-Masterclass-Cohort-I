@@ -1,6 +1,6 @@
 #[cfg(test)]
 mod tests {
-    use crate::{school::School, student::Student, student::StudentStatus};
+    use crate::management::{school::School, student::{ Student, StudentStatus }};
 
     #[test]
     fn test_create_student() {
