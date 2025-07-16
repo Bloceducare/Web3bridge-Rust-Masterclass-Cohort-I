@@ -84,8 +84,8 @@ mod tests {
     #[test]
     fn test_add_student() {
         let mut class = Classmanagement::new(String::from("Math 101"));
-        class.add_student(String::from("Joshua"), 20, Grade::GradeC, Status::Active);
-        class.add_student(String::from("Satoshi"), 22, Grade::GradeB, Status::Inactive);
+        class.add_student(String::from("Osuolale"), 20, Grade::GradeC, Status::Active);
+        class.add_student(String::from("Alfa Esan"), 22, Grade::GradeB, Status::Inactive);
         assert_eq!(class.get_students().len(), 2);
     }
 
