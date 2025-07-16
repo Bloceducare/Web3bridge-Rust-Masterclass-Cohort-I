@@ -10,13 +10,14 @@ pub enum Grade{
 }
 
 #[derive(PartialEq)]
-#[derive(Debug)]
+#[derive(Debug, Copy, Clone)]
 pub enum Status{
     Active,
     Inactive,
 }
 
 pub struct Student {
+    pub id: u32,
     pub name: String,
     pub age: u8,
     pub grade: Grade,
@@ -36,8 +37,9 @@ impl Class {
         }
     }
 
-    pub fn add_student(&mut self, name: String, age: u8, grade: Grade, status: Status) {
+    pub fn add_student(&mut self, id: u32, name: String, age: u8, grade: Grade, status: Status) {
         let student = Student {
+            id,
             name,
             age,
             grade,
@@ -60,6 +62,15 @@ impl Class {
         }
     }
 
+    pub fn update_student_status(&mut self, id: u32, status: Status){
+        for student in &mut self.students {
+            if student.id == id {
+                student.status = status;
+                println!("Student {} with id {}'s status updated to {:?}", student.name, student.id, student.status)
+            }
+        }
+    }
+
     pub fn update_student(&mut self, index: usize, name: String, age: u8, grade: Grade, status: Status) {
         if let Some(student) = self.students.get_mut(index) {
             student.name = name;
@@ -77,15 +88,15 @@ mod tests {
     #[test]
     fn test_add_student() {
         let mut class = Class::new(String::from("Math 101"));
-        class.add_student(String::from("Joshua"), 20, Grade::GradeC, Status::Active);
-        class.add_student(String::from("Satoshi"), 22, Grade::GradeB, Status::Inactive);
+        class.add_student(1,String::from("Joshua"), 20, Grade::GradeC, Status::Active);
+        class.add_student(1, String::from("Satoshi"), 22, Grade::GradeB, Status::Inactive);
         assert_eq!(class.get_students().len(), 2);
     }
 
     #[test]
     fn test_remove_student() {
         let mut class = Class::new(String::from("Math 101"));
-        class.add_student(String::from("Joshua"), 20, Grade::GradeC, Status::Active);
+        class.add_student(1,String::from("Joshua"), 20, Grade::GradeC, Status::Active);
         assert_eq!(class.get_students().len(), 1);
         class.remove_student(0);
         assert_eq!(class.get_students().len(), 0);
@@ -94,7 +105,7 @@ mod tests {
     #[test]
     fn test_get_student() {
         let mut class = Class::new(String::from("Math 101"));
-        class.add_student(String::from("Joshua"), 20, Grade::GradeC, Status::Active);
+        class.add_student(1, String::from("Joshua"), 20, Grade::GradeC, Status::Active);
         let student = class.get_student(0);
         assert_eq!(student.name, "Joshua");
         assert_eq!(student.age, 20);
@@ -105,7 +116,7 @@ mod tests {
     #[test]
     fn test_update_student() {
         let mut class = Class::new(String::from("Math 101"));
-        class.add_student(String::from("Joshua"), 20, Grade::GradeC, Status::Active);
+        class.add_student(1, String::from("Joshua"), 20, Grade::GradeC, Status::Active);
         assert_eq!(class.get_students().len(), 1);
         let student = class.get_student(0);
         assert_eq!(student.name, "Joshua");
@@ -117,6 +128,18 @@ mod tests {
         assert_eq!(student.name, "John");
         assert_eq!(student.age, 21);
         assert_eq!(student.grade, Grade::GradeB);
+        assert_eq!(student.status, Status::Inactive);
+    }
+
+    #[test]
+    fn test_update_status() {
+        let mut class = Class::new(String::from("Math 101"));
+        class.add_student(1, String::from("Joshua"), 20, Grade::GradeC, Status::Active);
+        assert_eq!(class.get_students().len(), 1);
+        let student = class.get_student(0);
+        assert_eq!(student.status, Status::Active);
+        class.update_student_status(1, Status::Inactive);
+        let student = class.get_student(0);
         assert_eq!(student.status, Status::Inactive);
     }
 }
