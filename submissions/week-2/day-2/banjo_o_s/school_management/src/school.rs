@@ -2,8 +2,8 @@ use crate::student::{Student, StudentStatus};
 use std::collections::HashMap;
 
 pub struct School {
-    students: HashMap<u128, Student>,
-    student_key: u128,
+    pub students: HashMap<u128, Student>,
+    pub student_key: u128,
 }
 
 impl School {
