@@ -1,1 +1,0 @@
-/Users/welcome1/Coding/Web3bridge-Rust-Masterclass-Cohort-I/submissions/week-2/day-2/Owoloko-Jeffrey/task-1/target/debug/task-1: /Users/welcome1/Coding/Web3bridge-Rust-Masterclass-Cohort-I/submissions/week-2/day-2/Owoloko-Jeffrey/task-1/src/main.rs

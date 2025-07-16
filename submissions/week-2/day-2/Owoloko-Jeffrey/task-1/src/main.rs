@@ -15,17 +15,20 @@ struct Student {
 #[derive(Debug)]
 pub struct Class {
     pub students: Vec<Student>,
+    next_id: u32,
 }
 
 impl Class {
     fn new() -> Self {
         Self {
             students: Vec::new(),
+            next_id: 0,
         }
     }
 
     fn register_student(&mut self, name: String, grade: i32) {
-        let student_id: u32 = (self.students.len()) as u32 + 1;
+        self.next_id += 1;
+        let student_id = self.next_id;
 
         let student = Student {
             id: student_id,
@@ -38,19 +41,22 @@ impl Class {
     }
 
     fn update_student(&mut self, id: u32, name: String, grade: i32) {
-        let student_id: usize = (id - 1).try_into().unwrap(); //inefficient impl
-        self.students[student_id].name = name;
-        self.students[student_id].grade = grade;
+        if let Some(student) = self.students.iter_mut().find(|s| s.id == id) {
+            student.name = name;
+            student.grade = grade;
+        }
     }
 
     fn mark_student_active(&mut self, id: u32) {
-        let student_id: usize = (id - 1).try_into().unwrap();
-        self.students[student_id].active = Active::Active;
+        if let Some(student) = self.students.iter_mut().find(|s| s.id == id) {
+            student.active = Active::Active;
+        }
     }
 
     fn mark_student_inactive(&mut self, id: u32) {
-        let student_id: usize = (id - 1).try_into().unwrap();
-        self.students[student_id].active = Active::Inactive;
+        if let Some(student) = self.students.iter_mut().find(|s| s.id == id) {
+            student.active = Active::Inactive;
+        }
     }
 
     fn delete_student(&mut self, id: u32) {
