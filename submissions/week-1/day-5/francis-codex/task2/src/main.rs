@@ -33,7 +33,7 @@ fn main() {
         match book {
             Book::Fiction { title, author, price } => {
                 println!("   Type: Fiction");
-                println!("   Title: {}", title);
+                println!("   Title: {}", title); 
                 println!("   Author: {}", author);
                 println!("   Price: ${:.2}", price);
             },
