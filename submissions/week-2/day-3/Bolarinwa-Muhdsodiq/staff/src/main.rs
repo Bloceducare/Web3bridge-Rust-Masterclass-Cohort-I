@@ -138,7 +138,7 @@ fn main() {
     };
 
     println!("Testing garage access:");
-    println!("=======================");
+    println!("--------------");
 
     // Media team (should have access)
     println!("1. {} (Media Team):", media_employee.name);
@@ -150,22 +150,22 @@ fn main() {
     // IT department (should have access)
     println!("\n2. {} (IT Department):", it_employee.name);
     match print_access_result(&it_employee) {
-        Ok(_) => println!("   ✓ Success"),
-        Err(e) => println!("   ✗ Error: {}", e),
+        Ok(_) => println!("Success"),
+        Err(e) => println!("Error: {}", e),
     }
 
     //  Terminated manager (should not have access)
     println!("\n3. {} (Terminated Manager):", terminated_manager.name);
     match print_access_result(&terminated_manager) {
-        Ok(_) => println!("   ✓ Success"),
-        Err(e) => println!("   ✗ Error: {}", e),
+        Ok(_) => println!("Success"),
+        Err(e) => println!("Error: {}", e),
     }
 
     // Test 4: Kitchen staff (should not have access)
     println!("\n4. {} (Kitchen Staff):", kitchen_staff.name);
     match print_access_result(&kitchen_staff) {
-        Ok(_) => println!("   ✓ Success"),
-        Err(e) => println!("   ✗ Error: {}", e),
+        Ok(_) => println!("Success"),
+        Err(e) => println!("Error: {}", e),
     }
 }
 
