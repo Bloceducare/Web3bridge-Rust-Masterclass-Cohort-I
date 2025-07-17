@@ -1,4 +1,4 @@
-use garage_access::*;
+use garage_access::structs::*;
 
 fn main() {
     let mut w3b = Web3Bridge::new();

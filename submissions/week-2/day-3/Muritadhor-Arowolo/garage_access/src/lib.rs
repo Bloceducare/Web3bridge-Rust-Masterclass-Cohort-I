@@ -1,46 +1,6 @@
-#[derive(Debug, PartialEq, Clone)]
-pub enum EmployeeDepartment{
-    Media,
-    IT,
-    Management,
-    SocialMedia,
-    TechnicianSupervisor,
-    Kitchen
-}
+pub mod structs;
 
-#[derive(Debug, PartialEq)]
-pub enum EmploymentStatus{
-    Active,
-    Terminated
-}
-
-#[derive(Debug)]
-pub enum BuildingType{
-    EthereumHouse,
-    StaffQuaters,
-    LiskGarage
-}
-
-pub struct Employee{
-    id: u32,
-    name: String,
-    department: EmployeeDepartment,
-    status: EmploymentStatus
-}
-
-pub struct Building {
-    id: u32,
-    building_type: BuildingType,
-    employees_with_access: Vec<EmployeeDepartment>
-}
-
-pub struct Web3Bridge {
-    employees: Vec<Employee>,
-    buildings: Vec<Building>,
-    next_employee_id: u32,
-    next_building_id: u32
-}
-
+use structs::*;
 impl Web3Bridge {
     pub fn new() -> Self {
         Web3Bridge { 
