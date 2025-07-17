@@ -1,0 +1,1 @@
+/Users/mac/Web3bridge-Rust-Masterclass-Cohort-I/submissions/week-2/day-2/kehinde-arowolo-day2/target/debug/kehinde-arowolo-day2: /Users/mac/Web3bridge-Rust-Masterclass-Cohort-I/submissions/week-2/day-2/kehinde-arowolo-day2/src/main.rs
