@@ -1,5 +1,13 @@
 pub mod employees {
-    pub mod garage;
+    pub mod models {
+        pub mod models;
+    }
+    pub mod services {
+        pub mod services;
+    }
+    pub mod constants {
+        pub mod constants;
+    }
 }
 
 pub mod test {

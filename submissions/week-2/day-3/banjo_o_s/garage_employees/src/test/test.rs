@@ -1,8 +1,7 @@
-
-
 #[cfg(test)]
 pub mod test {
-    use crate::employees::garage::{OtherEmployeeRole, EmployeeRole, Garage, Employee};
+    use crate::employees::constants::constants::{EmployeeRole, OtherEmployeeRole};
+    use crate::employees::models::models::{Employee, Garage};
 
     fn set_up_garage() -> Garage {
         Garage::new("w3b".to_string())
@@ -30,7 +29,10 @@ pub mod test {
         assert_eq!(found_employee.is_some(), true);
         assert_eq!(found_employee.unwrap().role, EmployeeRole::Manager);
         assert_eq!(garage.other_roles.contains_key(&3_u128), true);
-        assert_eq!(garage.other_roles.get(&3_u128).unwrap().role, OtherEmployeeRole::SocialMedia);
+        assert_eq!(
+            garage.other_roles.get(&3_u128).unwrap().role,
+            OtherEmployeeRole::SocialMedia
+        );
     }
 
     #[test]
@@ -41,12 +43,18 @@ pub mod test {
         let role: EmployeeRole = EmployeeRole::OtherEmployeeRole(3);
         garage.change_employee_role(1, role).expect("e didn't dey");
 
-        assert_eq!(garage.other_roles.get(&1_u128).unwrap().role, OtherEmployeeRole::Technician);
+        assert_eq!(
+            garage.other_roles.get(&1_u128).unwrap().role,
+            OtherEmployeeRole::Technician
+        );
 
         let role: EmployeeRole = EmployeeRole::OtherEmployeeRole(2);
         garage.add_employee("name".to_string(), role);
 
-        assert_eq!(garage.other_roles.get(&2_u128).unwrap().role, OtherEmployeeRole::SocialMedia);
+        assert_eq!(
+            garage.other_roles.get(&2_u128).unwrap().role,
+            OtherEmployeeRole::SocialMedia
+        );
         assert_eq!(garage.other_roles.get(&2_u128).is_some(), true);
 
         let role: EmployeeRole = EmployeeRole::IT;
@@ -81,7 +89,9 @@ pub mod test {
         assert_eq!(garage.has_access(1), true);
         let e = garage.get_employee(1).unwrap();
         println!("employee :: before{:#?}", e);
-        garage.change_employee_role(1, EmployeeRole::OtherEmployeeRole(2)).expect("e didn't dey");
+        garage
+            .change_employee_role(1, EmployeeRole::OtherEmployeeRole(2))
+            .expect("e didn't dey");
         let e = garage.get_employee(1).unwrap();
         println!("employee :: before{:#?}", e);
         assert_eq!(garage.has_access(1), false);
