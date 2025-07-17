@@ -1,0 +1,1 @@
+/home/beast/master_class/Web3bridge-Rust-Masterclass-Cohort-I/submissions/week-1/day-2/banjo_o_s/basic_arithemetic/target/debug/basic_arithemetic: /home/beast/master_class/Web3bridge-Rust-Masterclass-Cohort-I/submissions/week-1/day-2/banjo_o_s/basic_arithemetic/src/main.rs
