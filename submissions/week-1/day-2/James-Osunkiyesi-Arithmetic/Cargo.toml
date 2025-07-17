@@ -1,0 +1,6 @@
+[package]
+name = "James-Osunkiyesi-Arithmetic"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]

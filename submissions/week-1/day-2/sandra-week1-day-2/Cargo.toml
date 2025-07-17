@@ -1,0 +1,7 @@
+[package]
+name = "sandra-week1-day-2"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+colored = "3.0.0"
