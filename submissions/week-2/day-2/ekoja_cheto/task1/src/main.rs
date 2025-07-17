@@ -1,5 +1,6 @@
 #[derive(Debug, Clone)]
 struct Student {
+    id: i32,
     name: String,
     grade: u8,
     status: Status,
@@ -9,26 +10,27 @@ enum Status {
     Active,
     Inactive,
 }
-fn register_student(students: &mut Vec<Student>, name: String, grade: u8) {
+fn register_student( id:i32,students: &mut Vec<Student>, name: String, grade: u8) {
     let student = Student {
+        id,
         name,
         grade,
         status: Status::Active,
     };
     students.push(student);
 }
-fn edit_student(students: &mut Vec<Student>, index: usize, new_name: String, new_grade: u8) {
+fn edit_student(id:i32, students: &mut Vec<Student>, index: usize, new_name: String, new_grade: u8) {
     if let Some(student) = students.get_mut(index) {
         student.name = new_name;
         student.grade = new_grade;
     }
 }
-fn update_status(students: &mut Vec<Student>, index: usize, status: Status) {
+fn update_status(id:i32,students: &mut Vec<Student>, index: usize, status: Status) {
     if let Some(student) = students.get_mut(index) {
         student.status = status;
     }
 }
-fn delete_student(students: &mut Vec<Student>, index: usize) {
+fn delete_student(id:i32,students: &mut Vec<Student>, index: usize) {
     if index < students.len() {
         students.remove(index);
     }
