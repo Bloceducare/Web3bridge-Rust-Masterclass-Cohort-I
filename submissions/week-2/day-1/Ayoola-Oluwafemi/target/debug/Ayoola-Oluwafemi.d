@@ -1,0 +1,1 @@
+/Users/user/Desktop/Web3bridge-Rust-Masterclass-Cohort-I/submissions/week-2/day-1/Ayoola-Oluwafemi/target/debug/Ayoola-Oluwafemi: /Users/user/Desktop/Web3bridge-Rust-Masterclass-Cohort-I/submissions/week-2/day-1/Ayoola-Oluwafemi/src/main.rs /Users/user/Desktop/Web3bridge-Rust-Masterclass-Cohort-I/submissions/week-2/day-1/Ayoola-Oluwafemi/src/task.rs
