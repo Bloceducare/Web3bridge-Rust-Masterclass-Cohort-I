@@ -1,7 +1,15 @@
 #![allow(unused)]
 
-use web3bridge_garage::{Garage, GarageError, StaffType, StaffStatus};
+use web3bridge_garage::{Garage, GarageError, StaffStatus, StaffType};
 
+fn try_access_garage(garage: &Garage, id: u32) -> Result<(), GarageError> {
+    if garage.can_staff_access_garage(id)? {
+        println!("Staff with id {} can access the garage.", id);
+    } else {
+        println!("Staff with id {} cannot access the garage.", id);
+    }
+    Ok(())
+}
 fn main() {
     let mut garage = Garage::new();
     garage.add_staff(String::from("John"), StaffType::Manager);
@@ -16,10 +24,24 @@ fn main() {
 
     println!("All staff: {:?}", garage.get_all_staff());
 
+    match try_access_garage(&garage, 1) {
+        Ok(()) => (),
+        Err(e) => println!("Error: {:?}", e),
+    };
 
-    // can staff access garage
-    let can_access = garage.can_staff_access_garage(1);
-    // println!("Can access: {:?}", can_access);
-    
+    match try_access_garage(&garage, 2) {
+        Ok(()) => (),
+        Err(e) => println!("Error: {:?}", e),
+    };
+
+    match try_access_garage(&garage, 4) {
+        Ok(()) => (),
+        Err(e) => println!("Error: {:?}", e),
+    };
+
+    match try_access_garage(&garage, 5) {
+        Ok(()) => (),
+        Err(e) => println!("Error: {:?}", e),
+    };
     
 }
