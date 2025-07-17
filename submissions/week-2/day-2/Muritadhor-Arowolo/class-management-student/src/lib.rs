@@ -16,6 +16,7 @@ pub enum Status{
     Inactive,
 }
 
+#[derive(Debug, PartialEq)]
 pub struct Student {
     pub id: u32,
     pub name: String,
@@ -63,12 +64,7 @@ impl Class {
     }
 
     pub fn update_student_status(&mut self, id: u32, status: Status){
-        for student in &mut self.students {
-            if student.id == id {
-                student.status = status;
-                println!("Student {} with id {}'s status updated to {:?}", student.name, student.id, student.status)
-            }
-        }
+        self.students.iter_mut().find(|student| student.id == id).unwrap().status = status;
     }
 
     pub fn update_student(&mut self, index: usize, name: String, age: u8, grade: Grade, status: Status) {
@@ -106,11 +102,13 @@ mod tests {
     fn test_get_student() {
         let mut class = Class::new(String::from("Math 101"));
         class.add_student(1, String::from("Joshua"), 20, Grade::GradeC, Status::Active);
+        let new_student = Student{id: 1, name: String::from("Joshua"), age: 20, grade: Grade::GradeC, status: Status::Active};
         let student = class.get_student(0);
-        assert_eq!(student.name, "Joshua");
-        assert_eq!(student.age, 20);
-        assert_eq!(student.grade, Grade::GradeC);
-        assert_eq!(student.status, Status::Active);
+        // assert_eq!(student.name, "Joshua");
+        // assert_eq!(student.age, 20);
+        // assert_eq!(student.grade, Grade::GradeC);
+        // assert_eq!(student.status, Status::Active);
+        assert_eq!(*student, new_student)
     }
 
     #[test]
