@@ -1,98 +1,27 @@
-#[derive(Debug)]
-enum EmployeeType {
-     MultiMedia,
-     Ict,
-     Manager,
-     SocialMedia,
-     TechnicianSupervisor,
-     KitchenStaff,
-}
+use crate::employee_struct::{Employee, EmployeeDB};
+use crate::employee_enum::{EmployeeType, EmploymentStatus};
 
-#[derive(Debug, PartialEq)]
-enum EmploymentStatus {
-    Employed,
-    Fired,
-}
-
-#[derive(Debug, PartialEq)]
-enum AccessError {
-    NotEmployed,
-    NotAuthorized,
-}
-
-#[derive(Debug)]
-struct Employee {
-    id: u32,
-    name: String,
-    age: u32,
-    dept: EmployeeType,
-    status: EmploymentStatus,
-    
-}
-
-struct EmployeeDB {
-    data: Vec<Employee>,
-    next_id: u32,
-}
-
-impl EmployeeDB {
-    fn new() -> Self {
-        Self{ 
-            data: Vec::new(),
-            next_id: 1,
-         }
-    }
-
-    fn new_employee(&mut self, employee: Employee) -> u32 {
-        let present_id = self.next_id;
-
-        let new_employee = Employee {
-            id: present_id,
-            name: employee.name,
-            age: employee.age,
-            dept: employee.dept,
-            status: EmploymentStatus::Employed,
-        };
-
-        self.next_id += 1;
-        self.data.push(new_employee);
-        present_id
-
-    }
-
-    fn fire_employee(&mut self, id:u32, new_status: EmploymentStatus) -> bool {
-        if let Some(employee) = self.data.iter_mut().find(|employee_id| employee_id.id == id) {
-            employee.status = new_status;
-            true
-        } else {
-            false
-        }
-
-    }
-
-    fn can_access_building(&self, id: u32) -> Result<(), AccessError> {
-        let employee = self.data.iter().find(|e| e.id == id)
-            .ok_or(AccessError::NotAuthorized)?;
-
-        if employee.status != EmploymentStatus::Employed {
-            return Err(AccessError::NotEmployed);
-        }
-
-        match employee.dept {
-            EmployeeType::MultiMedia | EmployeeType::Ict | EmployeeType::Manager => Ok(()),
-            _ => Err(AccessError::NotAuthorized),
-        }
-    }
-
-    fn enter_building(&self, id: u32) -> Result<(), AccessError> {
-        self.can_access_building(id)?; // ? will return early if Err
-        println!("Access granted ✅");
-        Ok(())
-    }
-}
+pub mod employee_struct;
+pub mod employee_enum;
+pub mod employee_state;
 
 fn main() {
-    println!("Hello, world!");
+     let mut db = EmployeeDB::new();
+
+     let tomi_id = db.new_employee(Employee {
+        id: 0,
+        name: "Tomi".to_string(),
+        age: 29,
+        dept: EmployeeType::KitchenStaff,
+        status: EmploymentStatus::Employed, 
+    });
+
+    db.fire_employee(tomi_id, EmploymentStatus::Fired);
+
+    match db.enter_building(tomi_id) {
+        Ok(_) => (),
+        Err(e) => println!("Access denied ❌: {:?}", e),
+    }
 }
 
 
@@ -124,7 +53,7 @@ mod tests {
         name: "Tomi".to_string(),
         age: 29,
         dept: EmployeeType::KitchenStaff,
-        status: EmploymentStatus::Employed, // gets overwritten anyway
+        status: EmploymentStatus::Employed, 
     });
 
         db.fire_employee(tomi_id, EmploymentStatus::Fired);
