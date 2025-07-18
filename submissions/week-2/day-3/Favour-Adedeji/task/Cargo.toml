@@ -1,0 +1,10 @@
+[package]
+name = "task"
+version = "0.1.0"
+edition = "2024"
+
+[lib]
+name = "web3bridge"
+path = "src/lib.rs"
+
+[dependencies]
