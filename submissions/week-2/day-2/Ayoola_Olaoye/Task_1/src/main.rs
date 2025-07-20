@@ -11,6 +11,7 @@ pub struct StudentData {
     name: String,
     grade: String,
     isActive: ActiveState,
+    id: i32,
 }
 
 #[derive(Debug)]
@@ -47,6 +48,15 @@ impl StudentsDataBase {
             println!("Index out of bounds");
         }
     }
+
+    pub fn update_student_grade(&mut self, id: i32, grade: String) {
+        for student in &mut self.data {
+            if student.id == id {
+                student.grade = grade;
+                break;
+            }
+        }
+    }
 }
 
 #[cfg(test)]
@@ -58,12 +68,14 @@ pub fn test_students_database() {
         name: String::from("Alice"),
         grade: String::from("A"),
         isActive: ActiveState::Active,
+        id: 0,
     };
 
     let student2 = StudentData {
         name: String::from("Bob"),
         grade: String::from("B"),
         isActive: ActiveState::InActive,
+        id: 1,
     };
 
     db.add_student(student1);
@@ -77,6 +89,7 @@ pub fn test_students_database() {
             name: String::from("Alice Smith"),
             grade: String::from("A+"),
             isActive: ActiveState::Active,
+            id: 0,
         },
     );
 
@@ -85,6 +98,8 @@ pub fn test_students_database() {
     db.delete_student(1);
     assert_eq!(db.data.len(), 1);
     assert_eq!(db.data[0].name, "Alice Smith");
+
+    db.update_student_grade(0, String::from("F"));
 
     // assert_eq!(db.data[0].isActive, ActiveState::Active);
     println!("All tests passed!");
