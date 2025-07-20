@@ -1,5 +1,5 @@
 [package]
-name = "Wilfred_Adzer_Web3_Bridge_Staff_Access_Control"
+name = "access_control"
 version = "0.1.0"
 edition = "2024"
 

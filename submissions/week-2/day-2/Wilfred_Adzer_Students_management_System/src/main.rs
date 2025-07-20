@@ -1,5 +1,5 @@
 #[derive(Debug, Clone, PartialEq)]
-enum Active {
+enum StudentStatus {
     Active,
     Inactive,
 }
@@ -9,7 +9,7 @@ struct Student {
     id: u32,
     name: String,
     grade: u32,
-    status: Active,
+    status: StudentStatus,
 }
 
 #[derive(Debug)]
@@ -29,7 +29,7 @@ impl Catalogue {
             id,
             name,
             grade,
-            status: Active::Inactive,
+            status: StudentStatus::Inactive,
         };
         self.students.push(student);
     }
@@ -41,12 +41,24 @@ impl Catalogue {
         }
     }
 
+
+    /*
+    fn update_student(&mut self, id: u32, new_name: String) -> bool {
+    if let Some(student) = self.data.iter_mut().find(|s| s.id == id) {
+        student.name = new_name;
+        true
+    } else {
+        false
+    }
+}
+    */
+
     fn update_student(
         &mut self,
         id: u32,
         new_name: Option<&str>,
         new_grade: Option<&u32>,
-        new_status: Option<Active>,
+        new_status: Option<StudentStatus>,
     ) {
         if let Some(student) = self.students.iter_mut().find(|s| s.id == id) {
             if let Some(name) = new_name {
@@ -59,6 +71,13 @@ impl Catalogue {
                 student.status = status;
             }
         }
+    }
+
+    fn update_student_status(&mut self, id:u32, status: StudentStatus) {
+        if let Some(student) = self.students.iter_mut().find(|s| s.id == id) {
+            student.status = status
+        }
+        
     }
 
     fn delete_student(&mut self, id: u32) {
@@ -76,7 +95,7 @@ fn main() {
     catalogue.register_student(1, "Alice".to_string(), 85);
     catalogue.register_student(2, "Bob".to_string(), 78);
     catalogue.edit_student(1, "Alicia", 90);
-    catalogue.update_student(2, Some("Robert"), Some(&95), Some(Active::Active));
+    catalogue.update_student(2, Some("Robert"), Some(&95), Some(StudentStatus::Active));
     catalogue.delete_student(1);
     println!("Students in catalogue:");
     for s in catalogue.students {
@@ -97,7 +116,7 @@ mod tests {
         let student = catalogue.get_student(1).unwrap();
         assert_eq!(student.name, "Test");
         assert_eq!(student.grade, 50);
-        assert_eq!(student.status, Active::Inactive);
+        assert_eq!(student.status, StudentStatus::Inactive);
     }
 
     #[test]
@@ -114,11 +133,16 @@ mod tests {
     fn test_update_student() {
         let mut catalogue = Catalogue::new();
         catalogue.register_student(1, "Jane".to_string(), 60);
-        catalogue.update_student(1, Some("Janet"), Some(&80), Some(Active::Active));
+        catalogue.update_student(1, Some("Janet"), Some(&80), Some(StudentStatus::Active));
         let student = catalogue.get_student(1).unwrap();
         assert_eq!(student.name, "Janet");
         assert_eq!(student.grade, 80);
         assert_eq!(student.status, Active::Active);
+    }
+
+    #[test]
+    fn test_update_student_status(){
+
     }
 
     #[test]

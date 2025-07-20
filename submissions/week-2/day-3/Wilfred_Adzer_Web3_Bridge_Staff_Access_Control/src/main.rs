@@ -1,197 +1,145 @@
-use uuid::Uuid;
+use access_control::state::{EmployeeInfo, Employee, EmployeeStatus, EmployeeType, AccessControl};
 
+fn main() -> Result<(), String> {
+    let mut staff_access_control = EmployeeInfo::new();
 
+    println!("🏢 Web3Bridge Garage Access Control System");
+    println!("{}", "=".repeat(50));
 
-// Determine if an employee can access web3bridge garage using a digital keycard.
-// Employees that can access the building are:
-//     Media team
-//     IT department employees
-//     Managers
-// Other employees that work at the company are:
-//     Social media team
-//     Technician supervisors
-//     Kitchen staff
-// Ensure that terminated employees cannot access the building regardless of their position.
+    // Add employees with different roles
+    let alice_id = staff_access_control.add_employee("Alice".to_string(), EmployeeType::Media, EmployeeStatus::Employed);
+    let bob_id = staff_access_control.add_employee("Bob".to_string(), EmployeeType::IT, EmployeeStatus::Employed);
+    let charlie_id = staff_access_control.add_employee("Charlie".to_string(), EmployeeType::Manager, EmployeeStatus::Employed);
+    let david_id = staff_access_control.add_employee("David".to_string(), EmployeeType::SocialMedia, EmployeeStatus::Employed);
+    let eve_id = staff_access_control.add_employee("Eve".to_string(), EmployeeType::TechnicianSupervisor, EmployeeStatus::Employed);
+    let frank_id = staff_access_control.add_employee("Frank".to_string(), EmployeeType::KitchenStaff, EmployeeStatus::Employed);
 
-// Notes
+    // Check access for all employees using the ? operator function
+    println!("\n📋 Initial Access Status:");
+    staff_access_control.print_access_status(alice_id)?;
+    staff_access_control.print_access_status(bob_id)?;
+    staff_access_control.print_access_status(charlie_id)?;
+    staff_access_control.print_access_status(david_id)?;
+    staff_access_control.print_access_status(eve_id)?;
+    staff_access_control.print_access_status(frank_id)?;
 
-// Use an enum to represent all types of employees.
-// Use a struct to store:
-//     the employee type
-//     whether they are still employed
-// Use a function that returns a Result to determine if the employee may enter the building.
-// Print whether the employee may access the building:
-//     Must use a function that utilizes the question mark (?) operator to do this.
+    // Generate access keys for authorized employees
+    println!("\n🔑 Generating Access Keys:");
+    let alice_key = match staff_access_control.generate_access_key(alice_id) {
+        Ok(key) => {
+            println!("✅ Access key generated for Alice: {}", key);
+            Some(key)
+        },
+        Err(e) => {
+            println!("❌ Error: {}", e);
+            None
+        }
+    };
 
+    match staff_access_control.generate_access_key(david_id) {
+        Ok(key) => println!("✅ Access key generated for David: {}", key),
+        Err(e) => println!("❌ Error: {}", e),
+    }
 
-#[derive(Debug,PartialEq)]
-enum EmployeeType {
-    Media,
-    IT,
-    Manager,
-    SocialMedia,
-    TechnicianSupervisor,
-    KitchenStaff,
-}
-
-enum EmployeeStatus {
-    Employed,
-    Terminated,
-}
-
-enum AccessControl {
-    Granted,
-    Denied
-}
-
-struct Employee {
-    id: u32,
-    name: String,
-    employee_type: EmployeeType,
-    status: EmployeeStatus,
-    access: AccessControl,
-}
-
-struct EmployeeInfo{
-    employee_data: Vec<Employee>,
-    next_id: u32,
-
-}
-
-
-impl EmployeeInfo {
-    fn new()-> Self {
-        Self {
-            employee_data: Vec::new(),
-            next_id: 1,
+    // **DEMONSTRATE KEY-BASED ACCESS**
+    println!("\n🚪 Testing Key-Based Access:");
+    
+    if let Some(key) = &alice_key {
+        // Alice uses her key to gain access
+        match staff_access_control.grant_access_with_key(key) {
+            Ok(message) => println!("{}", message),
+            Err(e) => println!("❌ {}", e),
         }
     }
 
+    // Test with invalid key
+    println!("\n🔍 Testing Invalid Key:");
+    match staff_access_control.grant_access_with_key("invalid-key-12345") {
+        Ok(message) => println!("{}", message),
+        Err(e) => println!("❌ {}", e),
+    }
 
-    fn add_employee(&mut self, name: String, employee_type: EmployeeType, status: EmployeeStatus) -> u32 {
+    // Generate key for Charlie and test it
+    let charlie_key = staff_access_control.generate_access_key(charlie_id).unwrap();
+    println!("\n🔑 Charlie's key generated: {}", charlie_key);
+    
+    match staff_access_control.grant_access_with_key(&charlie_key) {
+        Ok(message) => println!("{}", message),
+        Err(e) => println!("❌ {}", e),
+    }
 
-        let id = self.next_id;
-        let employee = Employee {
-            id: id,
-            name,
-            employee_type,
-            status: EmployeeStatus::Employed,
-            access: AccessControl::Granted,
+    // Terminate an employee and check access
+    println!("\n🚫 Terminating Bob...");
+    
+    // First generate a key for Bob
+    let bob_key = staff_access_control.generate_access_key(bob_id).unwrap();
+    println!("Bob's key before termination: {}", bob_key);
+    
+    // Bob uses his key successfully
+    println!("\n🚪 Bob tries to access before termination:");
+    staff_access_control.validate_and_print_access(&bob_key).unwrap();
+    
+    // Now terminate Bob
+    staff_access_control.terminate_employee(bob_id)?;
+    staff_access_control.print_access_status(bob_id)?;
+
+    // Try to use Bob's key after termination
+    println!("\n🚪 Bob tries to access after termination:");
+    match staff_access_control.grant_access_with_key(&bob_key) {
+        Ok(message) => println!("{}", message),
+        Err(e) => println!("❌ {}", e),
+    }
+
+    // Try to generate access key for terminated employee
+    println!("\n🔑 Attempting to generate new access key for terminated employee:");
+    match staff_access_control.generate_access_key(bob_id) {
+        Ok(key) => println!("✅ Access key for Bob: {}", key),
+        Err(e) => println!("❌ Error: {}", e),
+    }
+
+    // Demonstrate key management features
+    println!("\n📋 Active Access Keys:");
+    let active_keys = staff_access_control.list_active_keys();
+    for (key, emp_id, name) in active_keys {
+        println!("🔑 {}: {}...{} (Employee: {})", 
+                name, &key[..8], &key[key.len()-4..], emp_id);
+    }
+
+    // Revoke Alice's key
+    if let Some(key) = &alice_key {
+        println!("\n🔐 Revoking Alice's access key...");
+        staff_access_control.revoke_access_key(key)?;
+        
+        // Try to use revoked key
+        println!("🚪 Alice tries to use revoked key:");
+        match staff_access_control.grant_access_with_key(key) {
+            Ok(message) => println!("{}", message),
+            Err(e) => println!("❌ {}", e),
+        }
+    }
+
+    // Update an employee's role
+    println!("\n🔄 Promoting David to Manager...");
+    staff_access_control.update_employee(david_id, "David (Manager)".to_string(), EmployeeType::Manager)?;
+    staff_access_control.print_access_status(david_id)?;
+
+    // Generate access key for newly promoted employee
+    match staff_access_control.generate_access_key(david_id) {
+        Ok(key) => println!("✅ New access key for David: {}", key),
+        Err(e) => println!("❌ Error: {}", e),
+    }
+
+    // List all employees
+    println!("\n👥 All Employees:");
+    for employee in staff_access_control.get_all_employees() {
+        let access_symbol = match employee.access {
+            AccessControl::Granted => "✅",
+            AccessControl::Denied => "❌",
         };
-        self.next_id +=1;
-        self.employee_data.push(employee);
-        id
+        println!("{} {} (ID: {}) - {:?} - {:?}", 
+                access_symbol, employee.name, employee.id, employee.employee_type, employee.status);
     }
 
-
-    fn update_employee (&mut self, id: u32, new_name: String, new_type: EmployeeType) -> Result<(), String> {
-        if let Some(employee) = self.employee_data.iter_mut().find(|e| e.id == id) {
-            employee.name = new_name;
-            employee.employee_type = new_type;
-            Ok(())
-        } else {
-            Err(format!("Employee with ID {} not found", id))
-        }
-    }
-    fn get_employee(&self, id: u32) -> Result<&Employee, String> {
-        self.employee_data
-            .iter()
-            .find(|e| e.id == id)
-            .ok_or(format!("Employee with ID {} not found", id))
-    }
-
-
-
-    fn generate_access_key(&self, id: u32) -> Result<String, String> {
-        let access = self.can_access_garage(id)?;
-        match access {
-            AccessControl::Granted => {
-                let key = Uuid::new_v4().to_string();
-                Ok(key)
-            }
-            AccessControl::Denied => Err(format!("Employee with ID {} does not have access", id)),
-        }
-    }
-
-
-    fn can_access_garage(&self, id: u32) -> Result<AccessControl, String> {
-        let employee = self.get_employee(id)?; 
-
-        if let EmployeeStatus::Terminated = employee.status {
-            return Ok(AccessControl::Denied);
-        }
-
-        match employee.employee_type {
-            EmployeeType::Media | EmployeeType::IT | EmployeeType::Manager => {
-                Ok(AccessControl::Granted)
-            }
-            _ => Ok(AccessControl::Denied),
-        }
-    }
-
-
-    fn terminate_employee(&mut self, id: u32) -> Result<(), String> {
-        if let Some(employee) = self.employee_data.iter_mut().find(|e| e.id == id) {
-            employee.status = EmployeeStatus::Terminated;
-            employee.access = AccessControl::Denied;
-            Ok(())
-        } else {
-            Err(format!("Employee with ID {} not found", id))
-        }
-    }
-
-    fn get_all_employees(&self) -> &Vec<Employee> {
-        &self.employee_data
-    }
-}
-
-
-fn main(){
-}
-
-
-#[cfg(test)]
-
-mod tests {
-    use super::*;
-
-    fn setup() -> EmployeeInfo {
-        let mut employee_info = EmployeeInfo::new();
-        employee_info.add_employee("Wilfred".to_string(), EmployeeType::IT, EmployeeStatus::Employed);
-        employee_info.add_employee("Chris".to_string(), EmployeeType::Media, EmployeeStatus::Employed);
-        employee_info.add_employee("Richard".to_string(), EmployeeType::SocialMedia, EmployeeStatus::Employed);
-        employee_info.add_employee("Charlie".to_string(), EmployeeType::TechnicianSupervisor, EmployeeStatus::Employed);
-        employee_info.add_employee("Mike".to_string(), EmployeeType::KitchenStaff, EmployeeStatus::Employed);
-
-        employee_info
-    }
-
-
-
-    #[test]
-    fn test_add_employee(){
-        let mut employee_info = setup();
-        assert_eq!(employee_info.employee_data.len(), 5);
-        assert_eq!(employee_info.employee_data[0].name, "Wilfred");
-        assert_eq!(employee_info.employee_data[1].name, "Chris");
-        assert_eq!(employee_info.employee_data[2].name, "Richard");
-        assert_eq!(employee_info.employee_data[3].name, "Charlie");
-        assert_eq!(employee_info.employee_data[4].name, "Mike");
-        assert_eq!(employee_info.employee_data[0].employee_type, EmployeeType::IT);
-        // assert_eq!(employee_info.employee_data[1].status::Employed);
-    }
-
-
-
-    #[test]
-    fn test_generate_access_key() {
-        let mut employee_info = setup();
-        let key = employee_info.generate_access_key(1);
-        assert!(key.is_ok());
-        assert!(!key.unwrap().is_empty());
-
-        let key = employee_info.generate_access_key(3);
-        assert!(key.is_err());
-        assert_eq!(key.unwrap_err(), "Employee with ID 3 does not have access");
-    }
+    println!("\n✨ System demonstration completed successfully!");
+    Ok(())
 }
