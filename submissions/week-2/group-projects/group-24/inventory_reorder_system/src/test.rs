@@ -40,7 +40,6 @@ mod tests {
     #[test]
     fn test_view_order_by_id_output() {
         let inventory = setup();
-        // This test only prints, you would manually inspect the output for now.
         inventory.view_order_by_id(RequestId::Femi);
         inventory.view_order_by_id(RequestId::Nonso);
     }
