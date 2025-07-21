@@ -1,4 +1,3 @@
-use chrono::Local;
 /**
  *
  *
@@ -35,8 +34,9 @@ Enjoy!
  */
 
  
-use chrono::NaiveDate;
+use chrono::{Local, NaiveDate};
 use std::collections::HashMap;
+use std::io::{self, Write};
 
 #[derive(Debug, PartialEq, Eq, Clone)]
 pub enum ContractStatus {
@@ -47,7 +47,7 @@ pub enum ContractStatus {
 
 #[derive(Debug, Clone)]
 pub struct VendorContract {
-    id: u8,
+    id: u32,
     vendor_name: String,
     contract_value: u64,
     start_date: NaiveDate,
@@ -57,25 +57,18 @@ pub struct VendorContract {
 
 impl VendorContract {
     fn check_status(
-        id: u8,
+        id: u32,
         vendor_name: String,
         contract_value: u64,
         start_date: NaiveDate,
         end_date: NaiveDate,
     ) -> Self {
         let today = Local::now().naive_local().date();
-
-        let status = match end_date < today {
-            true => ContractStatus::Expired,
-            false => ContractStatus::Active,
+        let status = if end_date < today {
+            ContractStatus::Expired
+        } else {
+            ContractStatus::Active
         };
-
-        // let status  = if end_date < today {
-        //     ContractStatus::Expired
-
-        // } else {
-        //     ContractStatus::Active
-        // };
 
         VendorContract {
             id,
@@ -87,37 +80,10 @@ impl VendorContract {
         }
     }
 
-    fn add_contract(
-        contract_data: &mut Vec<VendorContract>,
-        id: u8,
-        vendor_name: String,
-        contract_value: u64,
-        start_date: NaiveDate,
-        end_date: NaiveDate,
-        status: ContractStatus,
-    ) {
-        let new_contract = VendorContract {
-            id,
-            vendor_name: vendor_name.to_string(),
-            contract_value,
-            start_date,
-            end_date,
-            status,
-        };
-
-        contract_data.push(new_contract);
-        println!("Contract with ID {} has been added.", id);
-    }
-
-    fn add_contract2(contract_data: &mut Vec<VendorContract>, new_contract: VendorContract) {
-        println!("Contract with ID {} has been added.", new_contract.id);
-        contract_data.push(new_contract);
-    }
-
-    fn view_allcontract(contract_data: &Vec<VendorContract>) {
-        for contract in contract_data {
-            print!(
-                "\n {}, {}, {}, {}, {}, {:?} \n",
+    fn view_all(contracts: &HashMap<u32, VendorContract>) {
+        for contract in contracts.values() {
+            println!(
+                "\nID: {}\nVendor: {}\nValue: {}\nStart: {}\nEnd: {}\nStatus: {:?}\n",
                 contract.id,
                 contract.vendor_name,
                 contract.contract_value,
@@ -128,10 +94,8 @@ impl VendorContract {
         }
     }
 
-    fn delete_expired_or_canceled(contract_data: &mut HashMap<u32, VendorContract>) {
-        // let today = Local::now().naive_local().date();
-
-        let to_remove: Vec<u32> = contract_data
+    fn delete_expired_or_canceled(contracts: &mut HashMap<u32, VendorContract>) {
+        let to_remove: Vec<u32> = contracts
             .iter()
             .filter_map(|(&id, contract)| {
                 if contract.status == ContractStatus::Expired
@@ -144,21 +108,22 @@ impl VendorContract {
             })
             .collect();
 
-        // Remove them
         for id in to_remove {
-            contract_data.remove(&id);
+            contracts.remove(&id);
         }
+
+        println!("✅ Expired or canceled contracts have been deleted.");
     }
 
     fn update_contract(
-        contract_data: &mut HashMap<u32, VendorContract>,
+        contracts: &mut HashMap<u32, VendorContract>,
         id: u32,
         new_vendor_name: Option<String>,
         new_contract_value: Option<u64>,
         new_start_date: Option<NaiveDate>,
         new_end_date: Option<NaiveDate>,
     ) {
-        if let Some(contract) = contract_data.get_mut(&id) {
+        if let Some(contract) = contracts.get_mut(&id) {
             if let Some(name) = new_vendor_name {
                 contract.vendor_name = name;
             }
@@ -174,7 +139,6 @@ impl VendorContract {
             if let Some(end) = new_end_date {
                 contract.end_date = end;
 
-                // Re-check contract status after changing end date
                 let today = Local::now().naive_local().date();
                 contract.status = if end < today {
                     ContractStatus::Expired
@@ -183,76 +147,149 @@ impl VendorContract {
                 };
             }
 
-            println!("Contract with ID {} has been updated.", id);
+            println!("✅ Contract updated successfully.");
         } else {
-            println!("No contract found with ID {}.", id);
+            println!("❌ No contract found with ID {}", id);
+        }
+    }
+
+    fn cancel_contract_by_id(contracts: &mut HashMap<u32, VendorContract>, id: u32) {
+        if let Some(contract) = contracts.get_mut(&id) {
+            contract.status = ContractStatus::Canceled;
+            println!("✅ Contract with ID {} has been canceled.", id);
+        } else {
+            println!("❌ No contract found with ID {}", id);
         }
     }
 }
 
-fn main() {
-    let mut contract_db: Vec<VendorContract> = Vec::new();
-
-    let contract1 = VendorContract::check_status(
-        1,
-        String::from("John"),
-        1_000_000,
-        NaiveDate::from_ymd_opt(2024, 1, 31).unwrap(),
-        NaiveDate::from_ymd_opt(2025, 1, 31).unwrap(),
-    );
-    let contract2 = VendorContract::check_status(
-        2,
-        String::from("Faith"),
-        4_000_000,
-        NaiveDate::from_ymd_opt(2025, 1, 31).unwrap(),
-        NaiveDate::from_ymd_opt(2026, 1, 31).unwrap(),
-    );
-
-    VendorContract::add_contract(
-        &mut contract_db,
-        contract1.id,
-        contract1.vendor_name,
-        contract1.contract_value,
-        contract1.start_date,
-        contract1.end_date,
-        contract1.status,
-    );
-
-    print!("\n the new db is {:?} \n", contract_db);
-
-    VendorContract::add_contract2(&mut contract_db, contract2);
-
-    // println!("Hello, world!");
-    print!("\n the new db is {:?} \n", contract_db);
-
-    VendorContract::view_allcontract(&contract_db);
-
-    let mut contract_map: HashMap<u32, VendorContract> = contract_db
-        .clone()
-        .into_iter()
-        .map(|contract| (contract.id as u32, contract))
-        .collect();
-
-    VendorContract::delete_expired_or_canceled(&mut contract_map);
-
-    print!("\n the hashmap db is {:?} \n", contract_map);
-
-    let contract_vec: Vec<VendorContract> = contract_map.values().cloned().collect();
-    VendorContract::view_allcontract(&contract_vec);
-
-    // Stage 3: Update contract by ID
-    VendorContract::update_contract(
-        &mut contract_map,
-        2,
-        Some("Faithy Enterprise Ltd.".to_string()),
-        Some(5_500_000),
-        None,
-        Some(NaiveDate::from_ymd_opt(2026, 12, 1).unwrap()),
-    );
-
-    // Convert HashMap back to Vec to view
-    let updated_vec: Vec<VendorContract> = contract_map.values().cloned().collect();
-
-    println!("\n--- Updated Contracts After Delete + Update (Vec) ---");
-    VendorContract::view_allcontract(&updated_vec);
+// ====== Input Helpers ======
+fn get_input(prompt: &str) -> String {
+    print!("{}", prompt);
+    io::stdout().flush().unwrap();
+    let mut input = String::new();
+    io::stdin().read_line(&mut input).unwrap();
+    input.trim().to_string()
 }
+
+fn parse_u32(prompt: &str) -> u32 {
+    loop {
+        let input = get_input(prompt);
+        if let Ok(num) = input.parse::<u32>() {
+            return num;
+        }
+        println!("Please enter a valid number.");
+    }
+}
+
+fn parse_u64(prompt: &str) -> u64 {
+    loop {
+        let input = get_input(prompt);
+        if let Ok(num) = input.parse::<u64>() {
+            return num;
+        }
+        println!("Please enter a valid number.");
+    }
+}
+
+fn parse_date(prompt: &str) -> NaiveDate {
+    loop {
+        let input = get_input(prompt);
+        if let Ok(date) = NaiveDate::parse_from_str(&input, "%Y-%m-%d") {
+            return date;
+        }
+        println!("Enter date in format YYYY-MM-DD.");
+    }
+}
+
+fn main() {
+    let mut contract_map: HashMap<u32, VendorContract> = HashMap::new();
+
+    loop {
+        println!("\n===== Vendor Contract Tracker =====");
+        println!("1. Add Contract");
+        println!("2. View All Contracts");
+        println!("3. Delete Expired or Canceled Contracts");
+        println!("4. Update Contract");
+        println!("5. Cancel a Contract by ID");
+        println!("6. Exit");
+        println!("===================================");
+
+        let choice = get_input("Enter your choice: ");
+
+        match choice.as_str() {
+            "1" => {
+                let id = parse_u32("Enter contract ID: ");
+                let name = get_input("Enter vendor name: ");
+                let value = parse_u64("Enter contract value: ");
+                let start = parse_date("Enter start date (YYYY-MM-DD): ");
+                let end = parse_date("Enter end date (YYYY-MM-DD): ");
+
+                let new_contract = VendorContract::check_status(id, name, value, start, end);
+                contract_map.insert(id, new_contract);
+
+                println!("✅ Contract added.");
+            }
+
+            "2" => {
+                if contract_map.is_empty() {
+                    println!("No contracts found.");
+                } else {
+                    VendorContract::view_all(&contract_map);
+                }
+            }
+
+            "3" => {
+                VendorContract::delete_expired_or_canceled(&mut contract_map);
+            }
+
+            "4" => {
+                let id = parse_u32("Enter ID of contract to update: ");
+
+                println!("Leave input empty to keep current value.");
+                let name_input = get_input("New vendor name: ");
+                let name = if name_input.is_empty() {
+                    None
+                } else {
+                    Some(name_input)
+                };
+
+                let value_input = get_input("New contract value: ");
+                let value = if value_input.is_empty() {
+                    None
+                } else {
+                    value_input.parse::<u64>().ok()
+                };
+
+                let start_input = get_input("New start date (YYYY-MM-DD): ");
+                let start = if start_input.is_empty() {
+                    None
+                } else {
+                    NaiveDate::parse_from_str(&start_input, "%Y-%m-%d").ok()
+                };
+
+                let end_input = get_input("New end date (YYYY-MM-DD): ");
+                let end = if end_input.is_empty() {
+                    None
+                } else {
+                    NaiveDate::parse_from_str(&end_input, "%Y-%m-%d").ok()
+                };
+
+                VendorContract::update_contract(&mut contract_map, id, name, value, start, end);
+            }
+
+            "5" => {
+                let id = parse_u32("Enter ID of contract to cancel: ");
+                VendorContract::cancel_contract_by_id(&mut contract_map, id);
+            }
+
+            "6" => {
+                println!("👋 Exiting.");
+                break;
+            }
+
+            _ => println!("Invalid choice. Try again."),
+        }
+    }
+}
+
