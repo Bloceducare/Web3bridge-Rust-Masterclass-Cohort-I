@@ -1,0 +1,15 @@
+[package]
+name = "group-13"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+name = "assignment"
+path = "src/main.rs"
+
+[[test]]
+name = "test"
+harness = true
+path = "tests/test.rs"
+
+[dependencies]
