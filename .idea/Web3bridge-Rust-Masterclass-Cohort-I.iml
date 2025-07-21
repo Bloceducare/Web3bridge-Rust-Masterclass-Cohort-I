@@ -6,11 +6,13 @@
       <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-5/banjo_o_s/todo/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/submissions/week-2/day-2/banjo_o_s/school_management/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/submissions/week-2/day-3/banjo_o_s/garage_employees/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-2/group-projects/group_12/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/submissions/week-2/group-projects/group_4/events/src" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-5/banjo_o_s/book_enum/target" />
       <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-5/banjo_o_s/todo/target" />
       <excludeFolder url="file://$MODULE_DIR$/submissions/week-2/day-2/banjo_o_s/school_management/target" />
       <excludeFolder url="file://$MODULE_DIR$/submissions/week-2/day-3/banjo_o_s/garage_employees/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-2/group-projects/group_12/target" />
       <excludeFolder url="file://$MODULE_DIR$/submissions/week-2/group-projects/group_4/events/target" />
     </content>
     <orderEntry type="inheritedJdk" />
