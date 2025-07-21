@@ -2,5 +2,6 @@
 name = "garage_employees"
 version = "0.1.0"
 edition = "2024"
+authors = ["Theo Ige", "Olayinka Habeeb", "Banjo", "Nyangasi Abigael"]
 
 [dependencies]
