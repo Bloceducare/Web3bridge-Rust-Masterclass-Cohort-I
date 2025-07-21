@@ -41,6 +41,9 @@ impl Inventory {
         });
     }
 
+
+    
+
     pub fn edit_order(&mut self, request_id: RequestId, new_item: Item) {
         for order in &mut self.data {
             if let Some(item) = order.get_mut(&request_id) {
