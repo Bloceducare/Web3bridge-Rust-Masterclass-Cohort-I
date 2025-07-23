@@ -1,13 +1,5 @@
-#[derive(Clone, Copy)]
-enum Employees {
-    MediaTeam,
-    IT,
-    Managers,
-    SMTeam,
-    Technician,
-    KitchenStaff,
-}
-
+pub mod lib;
+use lib::{ Employees, EmployeesStatus, Staff };
 impl Employees {
     fn require_level_access(self) -> Result<(), String> {
         match self {
@@ -38,17 +30,6 @@ impl Employees {
             _ => Err("You are not an employee".to_string()),
         }
     }
-}
-
-#[derive(PartialEq)]
-enum EmployeesStatus {
-    Employed,
-    Unemployed,
-}
-
-struct Staff {
-    employment: Employees,
-    status: EmployeesStatus,
 }
 
 impl Staff {
