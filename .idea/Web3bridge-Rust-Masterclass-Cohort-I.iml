@@ -1,0 +1,484 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="EMPTY_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/live-session/week-1/Day-4-live/csv_grouping/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/live-session/week-2/day-2-live/school_management/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/live-session/week-2/day-4-live-session/libray_stucture/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-1/Owoloko-Jeffrey-Basic-Arithmetic-In-Rust/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-2/Abimbola-Favour-Adedeji/task-2/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-2/Adepoju_Ayomide/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-2/Adesanoye-Samson/task2/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-2/Akpolo-Prince-Rust-Book-and-Arithemetic/Akpolo-Prince-Arithemetic/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-2/Alade-Jamiu-Damilola-Ownership/functions/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-2/Alfred-Olumide-Adenigba-Rust-Book-and-Basic-Arithmetic/olumide-adenigba-basic-arithmetic-in-rust/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-2/Anuoluwapo-Ali-day1/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-2/Ayoola_Olaoye/calculator_task/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-2/Ayooluwa-Oyewo-Basic-Arithmetic_And_Summary/basic_arithmetic/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-2/Babalola-Taiwo_RustBook-chap234/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-2/Bolarinwa-Muhdsodiq/basic_arithmetic/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-2/David-Dada/basic_arithmetic/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-2/Dean_Basic_Arithmetic/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-2/Ebele-Lynda-Okolo/calc-task/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-2/Ebuka_Moses/Calculator/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-2/Ekezie-Uchenna/task-2/arithmetic/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-2/Emmanuel-Paul-Arithmetic/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-2/EmmanuelAroso-BasicArithmetic/emarc_math_ops/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-2/Glory_Praise_Emmanuel/mini_calculator/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-2/Godswill/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-2/JOSEPH ALEONOMOH/calculator/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-2/James-Emmanuel/task2/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-2/James-Osunkiyesi-Arithmetic/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-2/John-Odey-calculator/basic_calculator/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-2/Mosadoluwa-morphing/basic_arithmetic/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-2/Muritadhor-Arowolo-Basic-Arithmetic/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-2/Nanle-Nathaniel/task-2-basic-arithmetic/nanle/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-2/Okoye-Nnenna/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-2/Oluwakemi-Atoyebi-Basic-Calc/calculate/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-2/Oluwatobiloba-Okekunle/basic_arithemtic/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-2/Oluwatosin_Serah_Basic_Operations/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-2/Popoola-Rahmat-Omowumi_Arithmetic-and-summary/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-2/Samson-Aderonmu-Rust-Book-Summarization/Arithmeic/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-2/Samuel-Dahunsi-Basic-Arithmetic/arithmetic/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-2/Tenitope-Adekeye/task-2-basic-arithmetic/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-2/Theophilus_Ige/Task_2/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-2/Tochukwu-John-Basic-Arithmetic/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-2/Wilfred_Adzer_Basic_Arithmetic_Op_In_Rust/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-2/abdulsalam_baruwa_summary_arithmetic/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-2/ajidokwu_sabo_functions/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-2/banjo_o_s/basic_arithemetic/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-2/daniel_joseph/basic_arithmetic_rust/basic-arithmetic/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-2/francis-codex/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-2/gbolahan_akande_rust_solution_week1_day2/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-2/goodness-kolapo-basic-arithmetic/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-2/kehinde-arowolo-day2/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-2/mubarak_aminu/arithmetic/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-2/omemgboji-emmanuel/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-2/sandra-week1-day-2/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-2/sogobanwo/basic_arthemetics/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/Abdulahi-Adedayo-Tree/task1/adedaryorh-task-1/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/Abdulahi-Adedayo-Tree/task2/adedaryorh-task-2/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/Adebara-Olamide/Task1/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/Adebara-Olamide/Task2/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/Adesanoye-Samson/task-1/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/Adesanoye-Samson/task-2/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/Akpolo_ogaga_prince_week1_day4/Task1/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/Akpolo_ogaga_prince_week1_day4/Task2/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/Alade-Jamiu-Damilola/task-1/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/Alade-Jamiu-Damilola/task-2/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/Alfred-Olumide-Adenigba/task-1/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/Alfred-Olumide-Adenigba/task-2/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/Anuoluwapo-Ali/Task-1/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/Anuoluwapo-Ali/Task-2/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/ArosoEmmanuel/task1/library/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/ArosoEmmanuel/task2/shippingbox/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/Ayomide-Adepoju/Task1/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/Ayomide-Adepoju/Task2/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/Ayoola-Oluwafemi/Task1/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/Ayoola-Oluwafemi/Task2/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/Ayoola_Olaoye/Task_1/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/Ayoola_Olaoye/Task_2/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/Ayooluwa-Oyewo/impl-keyword/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/Ayooluwa-Oyewo/library-item-management/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/Babalola-Taiwo_Day4-Tasks/Task-1/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/Babalola-Taiwo_Day4-Tasks/Task-2/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/Bolarinwa-Muhdsodiq/Task1/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/Bolarinwa-Muhdsodiq/Task2/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/David-Dada-Task1&amp;2/library_item_management/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/David-Dada-Task1&amp;2/shipping_box/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/Dean/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/Derrick-Struct-Test/Task-1/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/Ekezie-Uchenna/Task-1/library-item/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/Ekezie-Uchenna/Task-2/implemtation/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/Emmanuel-Paul/library_item/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/Emmanuel-Paul/shipping_box/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/Estheroche/task-2/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/Favour-Adedeji/LIM/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/Favour-Adedeji/task-2/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/Gbolahan-Akande/Gbolahan-Akande-Task-1/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/Gbolahan-Akande/Gbolahan-Akande-Task-2/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/Glory_Praise_Emmanuel/library_project/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/Glory_Praise_Emmanuel/shipping_project/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/James-Emmanuel/task1/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/James-Osunkiyesi/task-1/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/James-Osunkiyesi/task-2/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/John-Odey-library/task-1/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/John-Odey-library/task-2/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/Joseph Aleonomoh/implement_keyword/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/Joseph Aleonomoh/library/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/Muritadhor-Arowolo-Library-Items/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/Nanle_Nathaniel/task-1/nanle_library/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/Nanle_Nathaniel/task-2/nanle/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/Ofuzor-Chukwuemeke/Task1/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/Ofuzor-Chukwuemeke/Task2/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/Okoye-Nnenna/Task1/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/Okoye-Nnenna/Task2/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/Olayinka_Habeeb/Task1/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/Olayinka_Habeeb/Task2/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/Oluwakemi-Atoyebi/task1/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/Oluwatosin_Serah_week1_day4/task1/task1/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/Oluwatosin_Serah_week1_day4/task1/task2/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/Owoloko-Jeffrey/task-1/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/Owoloko-Jeffrey/task-2/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/Samson-Aderonmu/task-1/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/Samson-Aderonmu/task-2/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/Samuel-Dahunsi-Library-Item-Mgt/library-mgt/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/Temitope - Adekeye/task-1-library-management/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/Temitope - Adekeye/task-2-shipping-box-impl/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/Tochukwu_John/task-1/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/Tochukwu_John/task-2/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/Wilfred_Adzer_Basic_Library_System/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/Wilfred_Functionality_with_Impl_keyword/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/abdulsalam-baruwa/task_1/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/abdulsalam-baruwa/task_2/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/ajidokwu_sabo/task_1/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/ajidokwu_sabo/task_2/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/banjo_o_s/library_management/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/banjo_o_s/shipping_box/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/daniel_joseph/func-impl/func-impl/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/daniel_joseph/func-impl/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/daniel_joseph/lib_manager/lib-manager/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/ekoja-cheto/task1/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/ekoja-cheto/task2/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/francis-codex/task1/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/francis-codex/task2/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/kehinde-arowolo-day4/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/mosadoluwa-morphing/task_1/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/mosadoluwa-morphing/task_2/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/oluwatobiloba-okekunle/task-1/library-management-system/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/oluwatobiloba-okekunle/task-2/shipping-container-struct/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/omemgboji-emmanuel/task_1/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/omemgboji-emmanuel/task_2/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/sogobanwo/task_1_library_item_manager/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/sogobanwo/task_2_shipping_box/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/theophilus_ige/task_1/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/theophilus_ige/task_2/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-5/Adebara-Olamide/Task1/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-5/Adebara-Olamide/Task2/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-5/Adenigba-Alfred-Olumide/task-1/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-5/Adenigba-Alfred-Olumide/task-2/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-5/Adepoju-Ayomide/Task1/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-5/Adepoju-Ayomide/Task2/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-5/Adesanoye-Samson/task-1/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-5/Adesanoye-Samson/task-2/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-5/Alade-Jamiu-Damilola/task-1/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-5/Alade-Jamiu-Damilola/task-2/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-5/Ayoola-Oluwafemi/Task1/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-5/Ayoola-Oluwafemi/Task2/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-5/Ayoola_Olaoye/Task_1/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-5/Ayoola_Olaoye/Task_2/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-5/Ayooluwa-Oyewo/advanced-match/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-5/Ayooluwa-Oyewo/todo-list/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-5/Babalola-Taiwo_Day5-Tasks1-2/Task-1/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-5/Babalola-Taiwo_Day5-Tasks1-2/Task-2/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-5/Bolarinwa-Muhdsodiq/task-1/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-5/Bolarinwa-Muhdsodiq/task-2/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-5/David-Dada/match-enums/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-5/David-Dada/todo-list/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-5/Ebuka_Moses/Task1/Todo/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-5/Ebuka_Moses/Task2/Ad_Matching/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-5/Ekezie-Uchenna/task-1/todo/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-5/Ekezie-Uchenna/task-2/enumss/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-5/Emmanuel-Paul/books/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-5/Emmanuel-Paul/todo_app/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-5/Favour-Adedeji/task-1/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-5/Favour-Adedeji/task-2/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-5/Gbolahan-Akande/advanced_enums/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-5/Gbolahan-Akande/todo_task/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-5/Glory_Praise_Emmanuel/books_project/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-5/Glory_Praise_Emmanuel/todo_list/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-5/James-Osunkiyesi/task_1_todo_list/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-5/James-Osunkiyesi/task_2_advanced_match/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-5/Joseph Aleonomoh/advanced_match/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-5/Joseph Aleonomoh/todo/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-5/Muritadhor-Arowolo/task-1/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-5/Muritadhor-Arowolo/task-2/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-5/Nanle_Nathaniel/task-1/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-5/Nanle_Nathaniel/task-2/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-5/Ofuzor-CHukwuemeke/Task1/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-5/Ofuzor-CHukwuemeke/Task2/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-5/Oluwakemi Atoyebi/advancecd_match/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-5/Oluwakemi Atoyebi/to-do/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-5/Oluwatosin_Serah_day5/task1/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-5/Oluwatosin_Serah_day5/task2/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-5/Owoloko-Jeffrey/task-1/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-5/Owoloko-Jeffrey/task-2/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-5/Samson-Aderonmu/task-1/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-5/Samson-Aderonmu/task-2/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-5/Tijjani-Ridwanlah/Task-1/todo_lists/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-5/Tijjani-Ridwanlah/Task-2/advance_enum/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-5/Tochukwu-John/task-1-todo/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-5/Tochukwu-John/task-2-adv-match/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-5/Wilfred_Adzer_Advanced_Match/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-5/Wilfred_Adzer_Todo_App/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-5/abdulsalam-baruwa/task_one/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-5/abdulsalam-baruwa/task_two/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-5/ajidokwu_sabo/task_1/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-5/ajidokwu_sabo/task_2/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-5/banjo_o_s/book_enum/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-5/banjo_o_s/todo/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-5/daniel_joseph-day-5/library/library/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-5/estheroche/todo-task1/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-5/estheroche/todo-task2/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-5/francis-codex/task1/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-5/francis-codex/task2/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-5/mosadoluwa morphing/task1/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-5/mosadoluwa morphing/task2/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-5/oluwatobiloba-okekunle/task-1/todo-list/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-5/oluwatobiloba-okekunle/task-2/advanced-enum/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-5/omemgboji-emmanuel/task_1_todolist/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-5/omemgboji-emmanuel/task_2/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-5/sandra-week-1-day-5/task-1-todo_list/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-5/sandra-week-1-day-5/task-2-advanced-match-using-enums/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-5/sogobanwo/advanced_match_enums/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-5/sogobanwo/todolist/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-5/theophilus_ige/task_1/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-1/day-5/theophilus_ige/task_2/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-2/day-3/Adesanoye Samson/task-1/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-2/group-projects/group_12/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-5/oladele/ERC20/examples" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-5/oladele/ERC20/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-5/oladele/stylus_string/examples" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/submissions/week-5/oladele/stylus_string/src" isTestSource="false" />
+      <excludeFolder url="file://$MODULE_DIR$/live-session/week-1/Day-4-live/csv_grouping/target" />
+      <excludeFolder url="file://$MODULE_DIR$/live-session/week-2/day-2-live/school_management/target" />
+      <excludeFolder url="file://$MODULE_DIR$/live-session/week-2/day-4-live-session/libray_stucture/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-1/Owoloko-Jeffrey-Basic-Arithmetic-In-Rust/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-2/Abimbola-Favour-Adedeji/task-2/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-2/Adepoju_Ayomide/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-2/Adesanoye-Samson/task2/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-2/Akpolo-Prince-Rust-Book-and-Arithemetic/Akpolo-Prince-Arithemetic/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-2/Alade-Jamiu-Damilola-Ownership/functions/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-2/Alfred-Olumide-Adenigba-Rust-Book-and-Basic-Arithmetic/olumide-adenigba-basic-arithmetic-in-rust/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-2/Anuoluwapo-Ali-day1/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-2/Ayoola-Oluwafemi/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-2/Ayoola_Olaoye/calculator_task/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-2/Ayooluwa-Oyewo-Basic-Arithmetic_And_Summary/basic_arithmetic/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-2/Babalola-Taiwo_RustBook-chap234/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-2/Bolarinwa-Muhdsodiq/basic_arithmetic/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-2/David-Dada/basic_arithmetic/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-2/Dean_Basic_Arithmetic/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-2/Ebele-Lynda-Okolo/calc-task/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-2/Ebuka_Moses/Calculator/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-2/Ekezie-Uchenna/task-2/arithmetic/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-2/Emmanuel-Paul-Arithmetic/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-2/EmmanuelAroso-BasicArithmetic/emarc_math_ops/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-2/Glory_Praise_Emmanuel/mini_calculator/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-2/Godswill/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-2/JOSEPH ALEONOMOH/calculator/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-2/James-Emmanuel/task2/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-2/James-Osunkiyesi-Arithmetic/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-2/John-Odey-calculator/basic_calculator/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-2/Mosadoluwa-morphing/basic_arithmetic/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-2/Muritadhor-Arowolo-Basic-Arithmetic/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-2/Nanle-Nathaniel/task-2-basic-arithmetic/nanle/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-2/Okoye-Nnenna/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-2/Oluwakemi-Atoyebi-Basic-Calc/calculate/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-2/Oluwatobiloba-Okekunle/basic_arithemtic/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-2/Oluwatosin_Serah_Basic_Operations/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-2/Popoola-Rahmat-Omowumi_Arithmetic-and-summary/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-2/Samson-Aderonmu-Rust-Book-Summarization/Arithmeic/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-2/Samuel-Dahunsi-Basic-Arithmetic/arithmetic/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-2/Tenitope-Adekeye/task-2-basic-arithmetic/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-2/Theophilus_Ige/Task_2/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-2/Tochukwu-John-Basic-Arithmetic/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-2/Wilfred_Adzer_Basic_Arithmetic_Op_In_Rust/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-2/abdulsalam_baruwa_summary_arithmetic/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-2/ajidokwu_sabo_functions/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-2/banjo_o_s/basic_arithemetic/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-2/daniel_joseph/basic_arithmetic_rust/basic-arithmetic/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-2/francis-codex/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-2/gbolahan_akande_rust_solution_week1_day2/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-2/goodness-kolapo-basic-arithmetic/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-2/kehinde-arowolo-day2/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-2/mubarak_aminu/arithmetic/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-2/omemgboji-emmanuel/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-2/sandra-week1-day-2/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-2/sogobanwo/basic_arthemetics/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/Abdulahi-Adedayo-Tree/task1/adedaryorh-task-1/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/Abdulahi-Adedayo-Tree/task2/adedaryorh-task-2/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/Adebara-Olamide/Task1/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/Adebara-Olamide/Task2/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/Adesanoye-Samson/task-1/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/Adesanoye-Samson/task-2/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/Akpolo_ogaga_prince_week1_day4/Task1/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/Akpolo_ogaga_prince_week1_day4/Task2/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/Alade-Jamiu-Damilola/task-1/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/Alade-Jamiu-Damilola/task-2/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/Alfred-Olumide-Adenigba/task-1/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/Alfred-Olumide-Adenigba/task-2/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/Anuoluwapo-Ali/Task-1/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/Anuoluwapo-Ali/Task-2/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/ArosoEmmanuel/task1/library/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/ArosoEmmanuel/task2/shippingbox/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/Ayomide-Adepoju/Task1/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/Ayomide-Adepoju/Task2/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/Ayoola-Oluwafemi/Task1/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/Ayoola-Oluwafemi/Task2/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/Ayoola_Olaoye/Task_1/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/Ayoola_Olaoye/Task_2/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/Ayooluwa-Oyewo/impl-keyword/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/Ayooluwa-Oyewo/library-item-management/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/Babalola-Taiwo_Day4-Tasks/Task-1/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/Babalola-Taiwo_Day4-Tasks/Task-2/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/Bolarinwa-Muhdsodiq/Task1/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/Bolarinwa-Muhdsodiq/Task2/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/David-Dada-Task1&amp;2/library_item_management/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/David-Dada-Task1&amp;2/shipping_box/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/Dean/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/Derrick-Struct-Test/Task-1/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/Ekezie-Uchenna/Task-1/library-item/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/Ekezie-Uchenna/Task-2/implemtation/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/Emmanuel-Paul/library_item/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/Emmanuel-Paul/shipping_box/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/Estheroche/task-2/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/Favour-Adedeji/LIM/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/Favour-Adedeji/task-2/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/Gbolahan-Akande/Gbolahan-Akande-Task-1/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/Gbolahan-Akande/Gbolahan-Akande-Task-2/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/Glory_Praise_Emmanuel/library_project/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/Glory_Praise_Emmanuel/shipping_project/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/James-Emmanuel/task1/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/James-Osunkiyesi/task-1/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/James-Osunkiyesi/task-2/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/John-Odey-library/task-1/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/John-Odey-library/task-2/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/Joseph Aleonomoh/implement_keyword/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/Joseph Aleonomoh/library/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/Muritadhor-Arowolo-Library-Items/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/Nanle_Nathaniel/task-1/nanle_library/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/Nanle_Nathaniel/task-2/nanle/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/Ofuzor-Chukwuemeke/Task1/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/Ofuzor-Chukwuemeke/Task2/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/Okoye-Nnenna/Task1/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/Okoye-Nnenna/Task2/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/Olayinka_Habeeb/Task1/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/Olayinka_Habeeb/Task2/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/Oluwakemi-Atoyebi/task1/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/Oluwatosin_Serah_week1_day4/task1/task1/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/Oluwatosin_Serah_week1_day4/task1/task2/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/Owoloko-Jeffrey/task-1/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/Owoloko-Jeffrey/task-2/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/Samson-Aderonmu/task-1/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/Samson-Aderonmu/task-2/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/Samuel-Dahunsi-Library-Item-Mgt/library-mgt/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/Temitope - Adekeye/task-1-library-management/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/Temitope - Adekeye/task-2-shipping-box-impl/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/Tochukwu_John/task-1/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/Tochukwu_John/task-2/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/Wilfred_Adzer_Basic_Library_System/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/Wilfred_Functionality_with_Impl_keyword/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/abdulsalam-baruwa/task_1/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/abdulsalam-baruwa/task_2/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/ajidokwu_sabo/task_1/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/ajidokwu_sabo/task_2/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/banjo_o_s/library_management/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/banjo_o_s/shipping_box/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/daniel_joseph/func-impl/func-impl/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/daniel_joseph/func-impl/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/daniel_joseph/lib_manager/lib-manager/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/ekoja-cheto/task1/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/ekoja-cheto/task2/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/francis-codex/task1/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/francis-codex/task2/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/kehinde-arowolo-day4/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/mosadoluwa-morphing/task_1/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/mosadoluwa-morphing/task_2/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/oluwatobiloba-okekunle/task-1/library-management-system/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/oluwatobiloba-okekunle/task-2/shipping-container-struct/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/omemgboji-emmanuel/task_1/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/omemgboji-emmanuel/task_2/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/sogobanwo/task_1_library_item_manager/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/sogobanwo/task_2_shipping_box/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/theophilus_ige/task_1/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-4/theophilus_ige/task_2/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-5/Adebara-Olamide/Task1/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-5/Adebara-Olamide/Task2/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-5/Adenigba-Alfred-Olumide/task-1/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-5/Adenigba-Alfred-Olumide/task-2/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-5/Adepoju-Ayomide/Task1/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-5/Adepoju-Ayomide/Task2/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-5/Adesanoye-Samson/task-1/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-5/Adesanoye-Samson/task-2/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-5/Alade-Jamiu-Damilola/task-1/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-5/Alade-Jamiu-Damilola/task-2/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-5/Ayoola-Oluwafemi/Task1/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-5/Ayoola-Oluwafemi/Task2/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-5/Ayoola_Olaoye/Task_1/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-5/Ayoola_Olaoye/Task_2/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-5/Ayooluwa-Oyewo/advanced-match/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-5/Ayooluwa-Oyewo/todo-list/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-5/Babalola-Taiwo_Day5-Tasks1-2/Task-1/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-5/Babalola-Taiwo_Day5-Tasks1-2/Task-2/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-5/Bolarinwa-Muhdsodiq/task-1/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-5/Bolarinwa-Muhdsodiq/task-2/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-5/David-Dada/match-enums/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-5/David-Dada/todo-list/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-5/Ebuka_Moses/Task1/Todo/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-5/Ebuka_Moses/Task2/Ad_Matching/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-5/Ekezie-Uchenna/task-1/todo/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-5/Ekezie-Uchenna/task-2/enumss/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-5/Emmanuel-Paul/books/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-5/Emmanuel-Paul/todo_app/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-5/Favour-Adedeji/task-1/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-5/Favour-Adedeji/task-2/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-5/Gbolahan-Akande/advanced_enums/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-5/Gbolahan-Akande/todo_task/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-5/Glory_Praise_Emmanuel/books_project/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-5/Glory_Praise_Emmanuel/todo_list/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-5/James-Osunkiyesi/task_1_todo_list/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-5/James-Osunkiyesi/task_2_advanced_match/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-5/Joseph Aleonomoh/advanced_match/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-5/Joseph Aleonomoh/todo/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-5/Muritadhor-Arowolo/task-1/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-5/Muritadhor-Arowolo/task-2/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-5/Nanle_Nathaniel/task-1/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-5/Nanle_Nathaniel/task-2/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-5/Ofuzor-CHukwuemeke/Task1/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-5/Ofuzor-CHukwuemeke/Task2/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-5/Oluwakemi Atoyebi/advancecd_match/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-5/Oluwakemi Atoyebi/to-do/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-5/Oluwatosin_Serah_day5/task1/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-5/Oluwatosin_Serah_day5/task2/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-5/Owoloko-Jeffrey/task-1/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-5/Owoloko-Jeffrey/task-2/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-5/Samson-Aderonmu/task-1/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-5/Samson-Aderonmu/task-2/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-5/Tijjani-Ridwanlah/Task-1/todo_lists/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-5/Tijjani-Ridwanlah/Task-2/advance_enum/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-5/Tochukwu-John/task-1-todo/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-5/Tochukwu-John/task-2-adv-match/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-5/Wilfred_Adzer_Advanced_Match/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-5/Wilfred_Adzer_Todo_App/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-5/abdulsalam-baruwa/task_one/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-5/abdulsalam-baruwa/task_two/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-5/ajidokwu_sabo/task_1/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-5/ajidokwu_sabo/task_2/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-5/banjo_o_s/book_enum/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-5/banjo_o_s/todo/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-5/daniel_joseph-day-5/library/library/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-5/estheroche/todo-task1/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-5/estheroche/todo-task2/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-5/francis-codex/task1/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-5/francis-codex/task2/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-5/mosadoluwa morphing/task1/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-5/mosadoluwa morphing/task2/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-5/oluwatobiloba-okekunle/task-1/todo-list/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-5/oluwatobiloba-okekunle/task-2/advanced-enum/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-5/omemgboji-emmanuel/task_1_todolist/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-5/omemgboji-emmanuel/task_2/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-5/sandra-week-1-day-5/task-1-todo_list/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-5/sandra-week-1-day-5/task-2-advanced-match-using-enums/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-5/sogobanwo/advanced_match_enums/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-5/sogobanwo/todolist/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-5/theophilus_ige/task_1/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-1/day-5/theophilus_ige/task_2/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-2/day-3/Adesanoye Samson/task-1/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-2/group-projects/group_12/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-5/oladele/ERC20/target" />
+      <excludeFolder url="file://$MODULE_DIR$/submissions/week-5/oladele/stylus_string/target" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>
