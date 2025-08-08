@@ -127,3 +127,5 @@ Cargo.lock
 
 # target folder
 *target
+
+.specstory
