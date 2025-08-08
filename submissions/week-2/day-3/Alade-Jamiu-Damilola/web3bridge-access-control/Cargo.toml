@@ -1,6 +1,8 @@
 [package]
-name = "web3bridge-access-control"
+name = "web3bridge_garage"
 version = "0.1.0"
-edition = "2024"
+edition = "2021"
 
-[dependencies]
+[[bin]]
+name = "web3bridge_garage"  
+path = "src/main.rs"
