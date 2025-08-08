@@ -2,7 +2,7 @@
 use std::io;
 
 #[derive(Debug, Clone)]
-struct Todo {
+pub struct Todo {
     id: u32,
     title: String,
     description: String,
