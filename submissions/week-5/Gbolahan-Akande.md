@@ -14,3 +14,9 @@ cargo stylus new erc20_token
 cargo stylus build
 cargo stylus check
 cargo test
+
+### Task: erc6909-stylus
+**GitHub:** https://github.com/gboigwe/stylus-erc6909
+**Summary:**  
+Successfully implemented ERC-6909 multi-token standard in Rust for Arbitrium Stylus. The contract manages multiple token types within a single deployment, supporting per-token balances, allowances, and operator approvals. Built with Stylus SDK 0.9.0, addressing API changes including proper event emission using `evm::log()` and updated storage macros with `sol_storage!`.
+**Features:** Core ERC-6909 functions (total_supply, balance_of, transfer_from, approve, allowance, operator_approval, set_operator), Multi-token support with separate balances per token ID, Event emission (TransferSingle, ApprovalSingle), Basic mint function for token creation, Stylus SDK 0.9.0 compatibility
