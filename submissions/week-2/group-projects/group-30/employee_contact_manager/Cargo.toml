@@ -1,0 +1,16 @@
+[package]
+name = "employee_contact_manager"
+version = "0.1.0"
+edition = "2021"
+authors = ["Your Name <your.email@example.com>"]
+description = "A simple employee contact management system demonstrating Rust best practices"
+license = "MIT"
+repository = "https://github.com/example/employee_contact_manager"
+keywords = ["cli", "employee", "management", "contact"]
+categories = ["command-line-utilities"]
+
+[[bin]]
+name = "employee_manager"
+path = "src/main.rs"
+
+[dependencies]
