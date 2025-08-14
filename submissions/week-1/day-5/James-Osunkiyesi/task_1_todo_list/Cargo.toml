@@ -1,0 +1,8 @@
+[package]
+name = "task_1_todo_list"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+uuid = { version = "1.8", features = ["v4", "serde"] }
+colored = "2.0"
