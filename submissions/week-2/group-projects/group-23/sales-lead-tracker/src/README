@@ -1,0 +1,143 @@
+# Sales Lead Tracker
+
+A Rust-based command-line application for managing sales leads with progressive implementation stages.
+
+## Features
+
+- **Add Leads**: Store lead information (name, contact, value, status)
+- **Display Leads**: View all leads in formatted table
+- **Remove Leads**: Delete leads by ID
+- **Edit Leads**: Modify existing lead details
+- **Cancel Edits**: Revert changes during editing
+- **Data Validation**: Input validation and error handling
+
+## Implementation Stages
+
+### Stage 1: Basic Operations (Vec)
+- Add leads to vector storage
+- Display all leads
+- Simple 3-option menu
+
+### Stage 2: Advanced Storage (HashMap)
+- Migrated from Vec to HashMap for better performance
+- Added remove functionality
+- ID-based lead lookup
+
+### Stage 3: Full CRUD Operations
+- Edit existing leads
+- Cancel edit operations with backup/restore
+- Complete lead lifecycle management
+
+## Project Structure
+
+```
+src/
+├── main.rs              # Main application with switchable implementations
+├── mods.rs            # Data structures (Leads struct, LeadStatus enum)
+├── hashmapfn.rs        # HashMap operations
+└── vecfn.rs    # Vec operations
+```
+
+## Installation & Setup
+
+1. **Clone Repository**
+   ```bash
+   git clone <repository-url>
+   cd sales-lead-tracker
+   ```
+
+2. **Install Rust** (if not installed)
+   ```bash
+   curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+   ```
+
+3. **Run Application**
+   ```bash
+   cargo run
+   ```
+
+## Switching Between Implementations
+
+### Current: HashMap Implementation
+- Full functionality with remove/edit features
+- Uses HashMap for efficient ID-based operations
+
+### Switch to Vec Implementation
+In `src/main.rs`:
+1. Comment out HashMap section
+2. Uncomment Vec section
+3. Run `cargo run`
+
+## Data Models
+
+```rust
+struct Leads {
+    id: u32,
+    name: String,
+    contact: String,
+    value: f64,
+    status: LeadStatus,
+}
+
+enum LeadStatus {
+    New,
+    Contacted,
+    Qualified,
+    Lost,
+    Converted,
+}
+```
+
+##  Usage Examples
+
+### Adding a Lead
+```
+Enter lead name: John Doe
+Enter contact information: john@email.com
+Enter lead value: 5000.00
+Enter lead status: New
+```
+
+### Display Output
+```
+ID    Name                 Contact         Value      Status    
+-----------------------------------------------------------------
+1     John Doe             john@email.com  $5000.00   New
+2     Jane Smith           jane@phone.com  $3500.00   Contacted
+```
+
+### Editing a Lead
+```
+1. Edit Name  2. Edit Contact  3. Edit Value  4. Save
+```
+
+## Implementation Details
+
+### Stage 1 → Stage 2 Migration
+- **From**: `Vec<Leads>` with linear search
+- **To**: `HashMap<u32, Leads>` with direct ID access
+- **Benefits**: O(1) lookup, better scalability, efficient remove operations
+
+## Menu Interface
+
+```
+=== Lead Management System ===
+1. Add Lead
+2. Display Leads
+3. Remove Lead
+4. Edit Lead
+5. Cancel Edit
+6. Exit
+===================================
+```
+
+## Learning Outcomes
+
+- Rust ownership and borrowing concepts
+- Data structure selection and migration
+- Error handling patterns
+- Modular programming design
+- Command-line interface development
+- Progressive software development methodology
+
+---

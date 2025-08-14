@@ -1,0 +1,16 @@
+# Chapter 5 - Structs
+
+- `..` struct update syntax
+- Tuple structs
+- Unit-like structs
+- `{:?}` or `{:#?}` or `dbg!` to print structs
+- structs can impl methods/functions
+
+# Chapter 6 - Enums
+
+- options
+- can hold different types
+- `Option<T>` enum: either `Option::Some(T)` or `Option::None`
+- match with enum exhausts all options
+- match with other types must use `_` catch-all
+- `if let` `let else`
