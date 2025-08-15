@@ -2,8 +2,6 @@
 #[cfg(test)]
 mod test_todo_list{
     use crate::todo_list::{Todolist, Todo, TodolistClient};
-
-use super::*;
 use soroban_sdk::{vec, Env, String};
     fn setup() -> (Env, TodolistClient<'static>) {
     let env = Env::default();

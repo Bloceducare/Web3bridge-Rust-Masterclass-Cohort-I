@@ -2,8 +2,7 @@
 
 use crate::storage::{IncrementContract, IncrementContractClient};
 
-use super::*;
-use soroban_sdk::{vec, Env, String};
+use soroban_sdk::Env;
 
 #[test]
 fn test() {
