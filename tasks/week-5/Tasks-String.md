@@ -119,4 +119,3 @@ pub fn to_string(value: U256) -> String {
     buf.reverse();
     String::from_utf8(buf).unwrap()
 }
-d
