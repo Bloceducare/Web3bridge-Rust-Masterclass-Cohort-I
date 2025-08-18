@@ -161,7 +161,7 @@ Enjoy!
 
 ### Group 12: Marketing Campaign Tracker
 
-- Description: Manage marketing campaigns.
+- Description: Manage marketing campaigns. 
 - Stage 1:
   - Add campaigns (name, budget, start date).
   - View all campaigns.

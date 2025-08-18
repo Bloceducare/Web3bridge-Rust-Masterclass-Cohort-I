@@ -4,7 +4,7 @@ use std::collections::HashMap;
 pub enum CampaignStatus {
     Inactive,
     Active,
-    Completed,
+    Completed, 
 }
 
 #[derive(Debug)]
