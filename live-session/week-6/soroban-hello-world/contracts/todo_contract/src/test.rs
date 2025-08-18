@@ -2,8 +2,7 @@
 
 use crate::todo_list::{Todolist, TodolistClient};
 
-use super::*;
-use soroban_sdk::{vec, Env, String};
+use soroban_sdk::{Env, String};
 
 fn setup() -> (Env, TodolistClient<'static>) {
     let env = Env::default();
@@ -12,6 +11,7 @@ fn setup() -> (Env, TodolistClient<'static>) {
 
     (env, client)
 }
+
 #[test]
 fn test() {
     let (env, client) = setup();
