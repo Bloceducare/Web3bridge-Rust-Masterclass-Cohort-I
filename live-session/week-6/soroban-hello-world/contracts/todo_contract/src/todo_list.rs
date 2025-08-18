@@ -1,7 +1,4 @@
-use soroban_sdk::{
-    contract, contractimpl, contracttype, symbol_short, xdr::SorobanCredentials, Env, String,
-    Symbol, Vec,
-};
+use soroban_sdk::{contract, contractimpl, contracttype, symbol_short, Env, String, Symbol, Vec};
 
 #[contracttype]
 #[derive(Debug, PartialEq, Eq, Clone)]
@@ -10,6 +7,12 @@ pub struct Todo {
     pub title: String,
     pub description: String,
     pub status: bool,
+}
+
+#[contracttype]
+enum DataKey {
+    Todos,
+    NextID,
 }
 
 const TODOS: Symbol = symbol_short!("TOD0S");
@@ -24,7 +27,7 @@ impl Todolist {
     pub fn create_todo(env: Env, title: String, description: String) -> Todo {
         let mut todos = Self::get_todos(&env);
 
-        let mut current_id = env.storage().persistent().get(&NEXT_ID).unwrap_or(1);
+        let mut current_id = Self::get_id_enum(&env);
 
         let todo = Todo {
             id: current_id,
@@ -35,11 +38,11 @@ impl Todolist {
 
         todos.push_back(todo.clone());
 
-        env.storage().persistent().set(&TODOS, &todos);
+        env.storage().persistent().set(&DataKey::Todos, &todos);
 
         current_id += 1;
 
-        env.storage().persistent().set(&NEXT_ID, &current_id);
+        env.storage().persistent().set(&DataKey::Todos, &current_id);
 
         todo
     }
@@ -52,7 +55,7 @@ impl Todolist {
                 updated.title = title;
                 updated.description = description;
                 todos.set(i, updated);
-                env.storage().persistent().set(&TODOS, &todos);
+                env.storage().persistent().set(&DataKey::Todos, &todos);
                 return true;
             }
         }
@@ -67,7 +70,7 @@ impl Todolist {
                 if todo.id == id {
                     todo.status = !todo.status;
                     todos.set(i, todo);
-                    env.storage().persistent().set(&TODOS, &todos);
+                    env.storage().persistent().set(&DataKey::Todos, &todos);
                     return true;
                 }
             }
@@ -80,7 +83,7 @@ impl Todolist {
 
         if let Some(todo) = todos.iter().position(|i| i.id == id) {
             todos.remove(todo as u32);
-            env.storage().persistent().set(&TODOS, &todos);
+            env.storage().persistent().set(&DataKey::Todos, &todos);
             return true;
         }
 
@@ -96,7 +99,7 @@ impl Todolist {
                     todo.title = title;
                     todo.description = description;
                     todos.set(i, todo);
-                    env.storage().persistent().set(&TODOS, &todos);
+                    env.storage().persistent().set(&DataKey::Todos, &todos);
 
                     return true;
                 }
@@ -110,5 +113,18 @@ impl Todolist {
             .persistent()
             .get(&TODOS)
             .unwrap_or(Vec::new(env))
+    }
+
+    pub fn get_todos_enum(env: &Env) -> Vec<Todo> {
+        env.storage()
+            .persistent()
+            .get(&DataKey::Todos)
+            .unwrap_or(Vec::new(env))
+    }
+    pub fn get_id_enum(env: &Env) -> u32 {
+        env.storage()
+            .persistent()
+            .get(&DataKey::NextID)
+            .unwrap_or(1)
     }
 }
