@@ -1,0 +1,1 @@
+/home/chukwuemek/Documents/Rust\ Masterckass/Web3bridge-Rust-Masterclass-Cohort-I/submissions/week-2/day-3/Ofuzor-Chukwuemeke/task1/target/debug/task1: /home/chukwuemek/Documents/Rust\ Masterckass/Web3bridge-Rust-Masterclass-Cohort-I/submissions/week-2/day-3/Ofuzor-Chukwuemeke/task1/src/main.rs
