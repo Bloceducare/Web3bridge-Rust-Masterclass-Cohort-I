@@ -3,5 +3,5 @@
 version = 4
 
 [[package]]
-name = "task_2"
+name = "customer-feedback"
 version = "0.1.0"

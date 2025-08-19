@@ -3,5 +3,5 @@
 version = 4
 
 [[package]]
-name = "task_1"
+name = "school-management-system"
 version = "0.1.0"
