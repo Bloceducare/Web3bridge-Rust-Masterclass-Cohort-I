@@ -1,0 +1,16 @@
+[package]
+name = "godswill-class-management-system"
+version = "0.1.0"
+edition = "2021"
+authors = ["Godswill"]
+description = "A class management system for tracking students"
+
+[[bin]]
+name = "main"
+path = "src/main.rs"
+
+[lib]
+name = "godswill_class_management_system"
+path = "src/lib.rs"
+
+[dependencies]

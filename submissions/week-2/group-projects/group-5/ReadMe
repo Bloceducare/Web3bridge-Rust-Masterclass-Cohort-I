@@ -1,0 +1,23 @@
+### Budget Allocator CLI
+A simple command-line tool to manage departmental budgets, built in Rust using clap, with JSON-based data persistence and CSV export functionality.
+
+## Features
+1. Add budget categories
+2. View all budgets
+3. Edit amounts or names
+4. Remove budget categories
+5. Export budgets to a .csv file
+6. Data is automatically saved in budgets.json
+
+```bash
+cargo run -- add IT 3000
+cargo run -- view
+cargo run -- edit-amount IT 5000
+cargo run -- edit-name IT Tech
+cargo run -- remove Tech
+cargo run -- export-csv
+```
+## Team Members: 
+@JOSIAH
+@NNENNA
+@NANLE
