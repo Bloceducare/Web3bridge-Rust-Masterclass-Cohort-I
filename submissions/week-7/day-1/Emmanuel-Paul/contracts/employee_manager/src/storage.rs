@@ -20,7 +20,7 @@ pub fn get_employee_key(_env: &Env, id: u32) -> Symbol {
         7 => symbol_short!("emp7"),
         8 => symbol_short!("emp8"),
         9 => symbol_short!("emp9"),
-        _ => symbol_short!("emp_x"), // For ids > 9, use a generic key with DataKey enum instead
+        _ => symbol_short!("emp_x"), // TODOS: I will implement For ids > 9, use a generic key with DataKey enum instead
     }
 }
 

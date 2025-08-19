@@ -67,8 +67,6 @@ impl EmployeeManager {
             institution: institution.clone(),
         };
 
-        // For now, just transfer existing tokens. The mint functionality may not be available
-        // depending on your token implementation
         let employee_address = employee.id.to_address(&env);
         token_client.transfer(&institution, &employee_address, &salary);
 
