@@ -1,0 +1,1 @@
+C:\Users\ebele\RustCodes\Web3bridge-Rust-Masterclass-Cohort-I\submissions\week-1\day-1\Ebele-Lynda-Okolo\task-2\target\debug\task-2.exe: C:\Users\ebele\RustCodes\Web3bridge-Rust-Masterclass-Cohort-I\submissions\week-1\day-1\Ebele-Lynda-Okolo\task-2\src\main.rs
