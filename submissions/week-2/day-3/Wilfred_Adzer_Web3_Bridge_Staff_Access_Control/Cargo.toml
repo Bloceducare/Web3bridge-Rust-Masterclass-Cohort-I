@@ -1,0 +1,8 @@
+[package]
+name = "Wilfred_Adzer_Web3_Bridge_Staff_Access_Control"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+uuid = { version = "1", features = ["v4"] }
+# rand = { version = "0.9.1", features = ["std"] }
