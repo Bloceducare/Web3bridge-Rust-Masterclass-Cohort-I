@@ -11,6 +11,7 @@ mod metadata;
 mod storage_types;
 mod contract;
 
+mod test;
 // pub use crate::contract;
 
 
