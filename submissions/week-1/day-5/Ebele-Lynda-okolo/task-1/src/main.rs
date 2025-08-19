@@ -2,6 +2,7 @@
 enum TodoLabel {
     Pray,
     Learning,
+    Emergency,
     WorkOut,
     Urgent,
     Others
