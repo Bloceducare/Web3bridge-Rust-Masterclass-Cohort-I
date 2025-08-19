@@ -1,0 +1,6 @@
+[package]
+name = "school_mgt"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
