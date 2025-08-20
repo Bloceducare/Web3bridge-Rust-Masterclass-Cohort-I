@@ -2,8 +2,7 @@
 
 use crate::todo_list::{Todolist, TodolistClient};
 
-use super::*;
-use soroban_sdk::{vec, Env, String};
+use soroban_sdk::{Env, String};
 
 fn setup() -> (Env, TodolistClient<'static>) {
     let env = Env::default();
@@ -12,6 +11,7 @@ fn setup() -> (Env, TodolistClient<'static>) {
 
     (env, client)
 }
+
 #[test]
 fn test() {
     let (env, client) = setup();
@@ -22,7 +22,7 @@ fn test() {
 
     let words = client.create_todo(&title, &description);
 
-    let all_todo = client.get_todos();
+    let all_todo = client.get_todos_enum();
 
     assert_eq!(all_todo.len(), 1);
     assert_eq!(words.description, description);
@@ -42,6 +42,10 @@ fn test_delete() {
     let description = String::from_str(&env, "From Garage to the hostel");
 
     client.create_todo(&title, &description);
+
+    let all_todo = client.get_todos_enum();
+
+    assert_eq!(all_todo.len(), 1);
 
     client.delete_todo(&id);
 
