@@ -1,0 +1,27 @@
+{
+  "options": {
+    "bindings": false,
+    "disable": ["bulk-memory"],
+    "use": ["abort=assembly/stylus/stylus/abort"],
+    "runtime": "stub",
+    "exportStart": "myStart"
+  },
+
+  "targets": {
+    "debug": {
+      "outFile": "build/debug.wasm",
+      "optimize": false,
+      "optimizeLevel": 0,
+      "shrinkLevel": 0,
+      "converge": false,
+      "debug": true
+    },
+    "release": {
+      "outFile": "build/release.wasm",
+      "optimize": true,
+      "optimizeLevel": 3,
+      "shrinkLevel": 2,
+      "converge": true
+    }
+  }
+}
