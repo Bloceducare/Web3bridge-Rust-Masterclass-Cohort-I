@@ -1,9 +1,6 @@
 # Rust's output directory
 target
-**/test_snapshots/
+
 # Local settings
 .soroban
 .stellar
-
-/test_snapshots
-/target
