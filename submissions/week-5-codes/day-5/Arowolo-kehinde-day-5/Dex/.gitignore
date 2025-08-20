@@ -1,0 +1,7 @@
+/target
+.env
+
+/.cargo
+/.github
+/licenses
+/rust-toolchain.toml
