@@ -1,0 +1,17 @@
+[package]
+name = "employee-management"
+version = "1.0.0"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+soroban-sdk = { workspace = true }
+
+[dev-dependencies]
+soroban-sdk = { workspace = true, features = ["testutils"] }
+sep41-token = { path = "../sep41-token" }
+
+[features]
+testutils = ["soroban-sdk/testutils"]
