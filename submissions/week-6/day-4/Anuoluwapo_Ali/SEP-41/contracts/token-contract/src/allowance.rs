@@ -1,5 +1,6 @@
 use soroban_sdk::{Address, Env};
-use crate::storage::{get_allowance, set_allowance, get_allowance_expiration, set_allowance_expiration};
+use crate::helpers::{get_allowance, set_allowance, get_allowance_expiration, set_allowance_expiration};
+use crate::errors::TokenError;
 
 pub fn approve_allowance(
     env: &Env,
@@ -7,20 +8,22 @@ pub fn approve_allowance(
     spender: &Address,
     amount: &i128,
     expiration_ledger: &u32,
-) {
+) -> Result<(), TokenError> {
     owner.require_auth();
     
     if *amount < 0 {
-        panic!("Amount must be non-negative");
+        return Err(TokenError::InvalidAmount); 
     }
-
+    
     let current_ledger = env.ledger().sequence();
     if *expiration_ledger <= current_ledger {
-        panic!("Expiration must be in the future");
+        return Err(TokenError::InvalidExpiration);
     }
-
+    
     set_allowance(env, owner, spender, amount);
     set_allowance_expiration(env, owner, spender, expiration_ledger);
+    
+    Ok(()) 
 }
 
 pub fn check_allowance(env: &Env, owner: &Address, spender: &Address) -> i128 {
@@ -30,6 +33,6 @@ pub fn check_allowance(env: &Env, owner: &Address, spender: &Address) -> i128 {
     if expiration <= current_ledger {
         return 0;
     }
-
+    
     get_allowance(env, owner, spender)
 }
