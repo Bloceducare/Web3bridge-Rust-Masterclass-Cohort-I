@@ -1,8 +1,17 @@
-/target
+# Rust build output
+/target/
+
+# Environment variables
 .env
 
-/licenses
-/examples
+# Local Cargo config
+.cargo/
 
-header.png
+# License directory (if generated)
+/licenses/
+
+# Rust toolchain file
 /rust-toolchain.toml
+
+# Ignore any nested target directories
+**/target/
