@@ -1,5 +1,5 @@
-use soroban_sdk::{Env, Address, String};
 use crate::errors::TokenError;
+use soroban_sdk::{Address, Env, String};
 
 pub trait TokenInterface {
     /// Returns the allowance for `spender` to transfer from `from`.
@@ -28,7 +28,13 @@ pub trait TokenInterface {
     ///
     /// Emits an event with topics `["approve", from: Address,
     /// spender: Address], data = [amount: i128, expiration_ledger: u32]`
-    fn approve(env: Env, from: Address, spender: Address, amount: i128, expiration_ledger: u32) -> Result<(), TokenError>;
+    fn approve(
+        env: Env,
+        from: Address,
+        spender: Address,
+        amount: i128,
+        expiration_ledger: u32,
+    ) -> Result<(), TokenError>;
 
     /// Returns the balance of `id`.
     ///
@@ -69,7 +75,13 @@ pub trait TokenInterface {
     ///
     /// Emits an event with topics `["transfer", from: Address, to: Address],
     /// data = amount: i128`
-    fn transfer_from(env: Env, spender: Address, from: Address, to: Address, amount: i128) -> Result<(), TokenError>;
+    fn transfer_from(
+        env: Env,
+        spender: Address,
+        from: Address,
+        to: Address,
+        amount: i128,
+    ) -> Result<(), TokenError>;
 
     /// Burn `amount` from `from`.
     ///
@@ -99,7 +111,8 @@ pub trait TokenInterface {
     ///
     /// Emits an event with topics `["burn", from: Address], data = amount:
     /// i128`
-    fn burn_from(env: Env, spender: Address, from: Address, amount: i128) -> Result<(), TokenError>;
+    fn burn_from(env: Env, spender: Address, from: Address, amount: i128)
+        -> Result<(), TokenError>;
 
     /// Returns the number of decimals used to represent amounts of this token.
     ///
@@ -125,7 +138,14 @@ pub trait TokenInterface {
 
 // Admin interface for minting and admin management
 pub trait AdminInterface {
-    fn initialize(env: Env, admin: Address, initial_supply: i128) -> Result<(), TokenError>;
+    fn initialize(
+        env: Env,
+        admin: Address,
+        initial_supply: i128,
+        decimals: u32,
+        name: String,
+        symbol: String,
+    ) -> Result<(), TokenError>;
     fn mint(env: Env, to: Address, amount: i128) -> Result<(), TokenError>;
     fn set_admin(env: Env, new_admin: Address);
     fn admin(env: Env) -> Address;
