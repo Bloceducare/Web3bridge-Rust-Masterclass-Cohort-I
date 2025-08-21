@@ -1,0 +1,21 @@
+[package]
+name = "sep41-token"
+version = "1.0.0"
+authors = ["Oghenerukevwe Sandra Idjighere <your-email@example.com>"]
+license = "Apache-2.0"
+edition = "2021"
+publish = false
+rust-version = "1.74"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+soroban-sdk = { workspace = true }
+soroban-token-sdk = { workspace = true }
+
+[dev-dependencies]
+soroban-sdk = { workspace = true, features = ["testutils"] }
+
+[features]
+testutils = ["soroban-sdk/testutils"]
