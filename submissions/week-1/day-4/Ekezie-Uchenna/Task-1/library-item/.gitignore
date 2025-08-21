@@ -1,0 +1,14 @@
+# Rust build output
+target/
+
+# Backup / lock files
+**/*.rs.bk
+Cargo.lock
+
+# Editor folders
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.dbw

@@ -1,0 +1,39 @@
+{
+  "name": "stylus-as-example",
+  "version": "1.0.0",
+  "description": "Example of a basic smart contract written in AssemblyScript for Arbitrum Stylus",
+  "main": "index.js",
+  "scripts": {
+    "test:local": "node test/local.js",
+    "test:onchain": "node test/onchain.js",
+    "asbuild:debug": "asc assembly/stylus/entrypoint.ts --target debug",
+    "asbuild:release": "asc assembly/stylus/entrypoint.ts --target release",
+    "asbuild": "npm run asbuild:debug && npm run asbuild:release",
+    "lint": "eslint . --ext .ts",
+    "format": "prettier --write ."
+  },
+  "keywords": [
+    "stylus",
+    "arbitrum",
+    "assemblyscript",
+    "smart-contract",
+    "blockchain"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "@ethersproject/abi": "^5.7.0",
+    "assemblyscript": "^0.27.1",
+    "ethers": "^6.7.0"
+  },
+  "devDependencies": {
+    "@offchainlabs/eslint-config-typescript": "^0.3.5",
+    "@offchainlabs/prettier-config": "^0.2.0",
+    "@types/node": "^20.4.9",
+    "@typescript-eslint/eslint-plugin": "^6.3.0",
+    "@typescript-eslint/parser": "^6.3.0",
+    "eslint": "^8.46.0",
+    "prettier": "^3.0.1",
+    "typescript": "^5.1.6"
+  },
+  "type": "module"
+}
