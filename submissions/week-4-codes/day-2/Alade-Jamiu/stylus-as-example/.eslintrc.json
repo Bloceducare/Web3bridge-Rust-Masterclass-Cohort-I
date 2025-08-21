@@ -1,0 +1,4 @@
+{
+  "extends": ["@offchainlabs/eslint-config-typescript/base"],
+  "overrides": []
+}
