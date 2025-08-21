@@ -21,7 +21,7 @@ pub use errors::*;
 
 contractmeta!(
     key = "Description",
-    val = "SEP-41 Compliant Fungible Token Contract"
+    val = "SEP-41 Compliant Token Contract"
 );
 
 contractmeta!(
