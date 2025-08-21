@@ -5,4 +5,5 @@ target
 .soroban
 .stellar
 
-/test_snapshots/
+**/test_snapshots/
+
