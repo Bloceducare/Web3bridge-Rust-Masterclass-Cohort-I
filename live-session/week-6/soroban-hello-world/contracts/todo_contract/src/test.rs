@@ -22,7 +22,7 @@ fn test() {
 
     let words = client.create_todo(&title, &description);
 
-    let all_todo = client.get_todos();
+    let all_todo = client.get_todos_enum();
 
     assert_eq!(all_todo.len(), 1);
     assert_eq!(words.description, description);
@@ -43,7 +43,7 @@ fn test_delete() {
 
     client.create_todo(&title, &description);
 
-    let all_todo = client.get_todos();
+    let all_todo = client.get_todos_enum();
 
     assert_eq!(all_todo.len(), 1);
 

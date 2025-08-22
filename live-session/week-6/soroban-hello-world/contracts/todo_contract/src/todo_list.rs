@@ -25,7 +25,7 @@ pub struct Todolist;
 #[contractimpl]
 impl Todolist {
     pub fn create_todo(env: Env, title: String, description: String) -> Todo {
-        let mut todos = Self::get_todos(&env);
+        let mut todos = Self::get_todos_enum(&env);
 
         let mut current_id = Self::get_id_enum(&env);
 
@@ -42,13 +42,15 @@ impl Todolist {
 
         current_id += 1;
 
-        env.storage().persistent().set(&DataKey::Todos, &current_id);
+        env.storage()
+            .persistent()
+            .set(&DataKey::NextID, &current_id);
 
         todo
     }
 
     pub fn update_todo(env: Env, id: u32, title: String, description: String) -> bool {
-        let mut todos = Self::get_todos(&env);
+        let mut todos = Self::get_todos_enum(&env);
         for i in 0..todos.len() {
             let mut updated = todos.get(i).unwrap();
             if updated.id == id {
@@ -63,7 +65,7 @@ impl Todolist {
     }
 
     pub fn complete_todo(env: Env, id: u32) -> bool {
-        let mut todos = Self::get_todos(&env);
+        let mut todos = Self::get_todos_enum(&env);
 
         for i in 0..todos.len() {
             if let Some(mut todo) = todos.get(i) {
@@ -79,7 +81,7 @@ impl Todolist {
     }
 
     pub fn delete_todo(env: Env, id: u32) -> bool {
-        let mut todos = Self::get_todos(&env);
+        let mut todos = Self::get_todos_enum(&env);
 
         if let Some(todo) = todos.iter().position(|i| i.id == id) {
             todos.remove(todo as u32);
@@ -91,7 +93,7 @@ impl Todolist {
     }
 
     pub fn update_todo2(env: Env, id: u32, title: String, description: String) -> bool {
-        let mut todos = Self::get_todos(&env);
+        let mut todos = Self::get_todos_enum(&env);
 
         for i in 0..todos.len() {
             if let Some(mut todo) = todos.get(i) {

@@ -17,7 +17,33 @@
 
 ---
 
+#[derive(Debug)]
+enum Book {
+    Fiction { title: String, author: String, price: f32 },
+    Magazine { title: String, author: String, price: f32 },
+    SciFi { title: String, price: f32 },
+}   
+
+
 
 fn main() {
-    println!("Hello, world!");
+    let books: Vec<Book> = vec![
+        Book::Fiction { title: String::from("Great"), author: String::from("Scott"), price: 10.99 },
+        Book::Magazine { title: String::from("National Geographic"), author: String::from("National Geographic Society"), price: 5.99 },
+        Book::SciFi { title: String::from("Dune"), price: 12.99 },
+    ];
+
+    for book in books {
+        match book {
+            Book::Fiction { title, author, price } => {
+                println!("Fiction Book: {}, Author: {}, Price: ${}", title, author, price);
+            }
+            Book::Magazine { title, author, price } => {
+                println!("Magazine: {}, Author: {}, Price: ${}", title, author, price);
+            }
+            Book::SciFi { title, price } => {
+                println!("Sci-Fi Book: {}, Price: ${}", title, price);
+            }
+        }
+    }
 }

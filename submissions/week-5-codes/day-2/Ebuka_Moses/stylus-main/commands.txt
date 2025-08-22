@@ -1,0 +1,8 @@
+zig build-lib ./src/main.zig -target wasm32-freestanding -dynamic --export=user_entrypoint -OReleaseSmall
+
+./cast call --rpc-url 'https://stylus-testnet.arbitrum.io/rpc' <contract-id> <input>
+
+cargo stylus check --wasm-file-path main.wasm 
+
+cargo stylus deploy --wasm-file-path chainid.wasm --private-key <private-key>
+

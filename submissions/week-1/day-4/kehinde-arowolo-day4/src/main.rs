@@ -22,6 +22,7 @@ println!("ID: {}", item.id);
  
 fn display_item_type(item: &LibraryItem) {
     println!("Item Type: {:?}", item.item_type);
+
 }
 
 #[derive(Debug)]
