@@ -36,6 +36,8 @@ sol! {
     event Approval(address indexed owner,address indexed spender,uint256 value);
 
     error InsufficientBalance(address from,uint256 have,uint256 want);
+    error InsufficientBalances(address from,uint256 have,uint256 want);
+
 
     error InsufficientAllowance(address owner,address spender ,uint256 have , uint256 want);
 }
