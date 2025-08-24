@@ -50,6 +50,10 @@ bower_components
 # Compiled binary addons
 build/Release
 
+# WebAssembly and build artifacts
+build/
+*.wasm
+
 # Dependency directories
 jspm_packages/
 
