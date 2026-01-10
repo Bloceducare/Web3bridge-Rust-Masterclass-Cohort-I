@@ -1,0 +1,1 @@
+/home/superman/Desktop/Rust/protocol-dev/Web3bridge-Rust-Masterclass-Cohort-I/submissions/week-1/day-2/goodness-kolapo-basic-arithmetic/target/debug/goodness-kolapo-basic-arithmetic: /home/superman/Desktop/Rust/protocol-dev/Web3bridge-Rust-Masterclass-Cohort-I/submissions/week-1/day-2/goodness-kolapo-basic-arithmetic/src/main.rs
