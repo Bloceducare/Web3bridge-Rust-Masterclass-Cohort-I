@@ -124,6 +124,12 @@ typings/
 target/
 **/target/
 Cargo.lock 
+# Cargo.toml
 
 # target folder
 *target
+
+
+# Added by cargo
+
+/target
